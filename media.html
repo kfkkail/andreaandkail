@@ -15,6 +15,7 @@
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="lib/Gallery/css/blueimp-gallery.css">
     <link href="css/default.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
@@ -49,66 +50,49 @@
       </div>
     </div>
 
-<div id="carousel-example-generic" class="carousel slide">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-  </ol>
+<div class="container paragraph">
+<div class="jumbotron">
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <img class="img-responsive" src="img/bg1.jpg" alt="">
-      <div class="carousel-caption">
-        Right after Kail proposed
-      </div>
-    </div>
-<div class="item">
-      <img class="img-responsive" src="img/Ring4.jpg" alt="">
-      <div class="carousel-caption">
-        The Ring!
-      </div>
-    </div>
-<div class="item">
-      <img class="img-responsive" src="img/Ring1.jpg" alt="">
-      <div class="carousel-caption">
-        K Heart A
-      </div>
-    </div>
-<div class="item">
-      <img class="img-responsive" src="img/Ring2.jpg" alt="">
-      <div class="carousel-caption">
-        Love You Always
-      </div>
-    </div>
-<div class="item">
-      <img class="img-responsive" src="img/bg.jpg" alt="">
-      <div class="carousel-caption">
-        Nashville Skyline
-      </div>
-    </div>
-  </div>
+<div id="links" class="links">
+    <a href="img/bg1.jpg" title="Banana">
+    <img src="img/bg1.jpg" alt="Banana">
+    </a>
+    <a href="img/Ring1.jpg" title="Apple">
+    <img src="img/Ring1.jpg" alt="Apple">
+    </a>
+    <a href="img/Ring2.jpg" title="Orange">
+    <img src="img/Ring2.jpg" alt="Orange">
+    </a>
+</div>
 
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-    <span class="icon-prev"></span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-    <span class="icon-next"></span>
-  </a>
-
+<!-- The Gallery as lightbox dialog, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+</div>
+</div> <!--/jumbotron-->
+</div> <!--/container-->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/Gallery/js/blueimp-gallery.js"></script>
     <script>
-    $('.carousel').carousel()
+    document.getElementById('links').onclick = function (event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = {index: link, event: event},
+        links = this.getElementsByTagName('a');
+        blueimp.Gallery(links, options);
+    };
     </script>
   </body>
 </html>
