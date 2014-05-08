@@ -27,27 +27,23 @@ img {
     text-align: center;
 }
 
-.paragraph {
-    padding-top: 70px;
-}
-
 @media(max-width:767px){
-    img{
+    .img-index{
         max-height:150px;
     }
 }
 @media(min-width:768px){
-    img{
+    .img-index{
         max-height:325px;
     }
 }
 @media(min-width:992px){
-    img{
+    .img-index{
         max-height:450px;
     }
 }
 @media(min-width:1200px){
-    img{
+    .img-index{
         max-height:570px;
     }    
 }
