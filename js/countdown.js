@@ -46,11 +46,11 @@ function putspan(backcolor, forecolor) {
  document.write("<span id='cntdwn'></span>");
 }
 
-TargetDate = "05/09/2015 5:00 PM";
+TargetDate = "05/03/2014 07:03 PM";
 CountActive = true;
-CountStepper = -1;
-LeadingZero = true;
-DisplayFormat = "May 9, 2015 * %%D%% Days to Go!!";
+CountStepper = 1;
+LeadingZero = false;
+DisplayFormat = "Engaged May 3, 2014 * %%D%% Days %%H%% Hours Engaged!!";
 FinishMessage = "It is finally here!";
 
 if (typeof(BackColor)=="undefined")
