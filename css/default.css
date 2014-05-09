@@ -6,6 +6,7 @@ html {
     overflow-y: hidden;
 }
 body {
+    font-family: 'Tangerine', serif;
     overflow-y: scroll;
     background:#fff url(../img/bg.jpg) no-repeat fixed center;
     background-size:cover;
