@@ -50,7 +50,7 @@ TargetDate = "05/03/2014 07:03 PM";
 CountActive = true;
 CountStepper = 1;
 LeadingZero = false;
-DisplayFormat = "Engaged May 3, 2014 * %%D%% Days %%H%% Hours Engaged!!";
+DisplayFormat = "May 3, 2014 * %%D%% Days %%H%% Hours Engaged!!";
 FinishMessage = "It is finally here!";
 
 if (typeof(BackColor)=="undefined")
