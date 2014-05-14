@@ -1,1 +1,1 @@
-ncftpput -R -v -u "keuschfamily" -p "Walnut18" ftp.nc1.server313.com ../andreaandkail/ /home/htpc/Documents/git/andreaandkail/img/
+ncftpput -R -v -u "keuschfamily" -p "Walnut18" ftp.nc1.server313.com ../www/ /home/htpc/Documents/git/andreaandkail/lib/
