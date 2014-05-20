@@ -6,8 +6,7 @@ html {
     overflow-y: hidden;
 }
 body {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
+    font-family: 'Lobster', cursive;
     overflow-y: scroll;
     background:#fff url(../img/bg.jpg) no-repeat fixed center;
     background-size:cover;
