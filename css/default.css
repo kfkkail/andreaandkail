@@ -21,3 +21,13 @@ body {
     background-color: rgba(238, 238, 238, 0.9);
     text-align: center;
 }
+
+.header {
+    font-family: 'Lobster', cursive;
+}
+
+/* for easier to read paragraphs */
+.paragraph {
+    text-align: left;
+    font-family: sans-serif;
+}

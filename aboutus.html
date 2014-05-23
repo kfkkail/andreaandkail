@@ -1,6 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +14,7 @@
     <meta http-equiv="pragma" content="no-cache" />
     <link rel="shortcut icon" href="img/favicon.ico">
 
-    <title>Media - Andrea & Kail</title>
+    <title>About Us - Andrea & Kail</title>
 
     <!-- Bootstrap core CSS -->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -31,9 +32,9 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- Fixed navbar -->
     <div class="container">
     <div class="navbar navbar-default" role="navigation">
@@ -44,14 +45,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Andrea & Kail</a>
+          <a class="navbar-brand" href="#">Andrea & Kail</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="index.html">Home</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
-            <li><a href="proposal.html">Proposal</a></li>
-            <li class="active"><a href="#">Media</a></li>
+            <li class="active"><a href="#">About Us</a></li>
+            <li><a href="proposal.html">Engagement</a></li>
+            <li><a href="media.html">Media</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a>
@@ -59,69 +60,23 @@
             </a></li>
           </ul>
         </div><!--/.nav-collapse -->
-      </div>
+        </div>
     </div>
 
-<div class="container paragraph">
-<div class="jumbotron">
 
-<div id="links" class="links">
-    <a href="img/bg1.jpg" title="After the Proposal!">
-    <img src="img/thumbnails/bg1.jpg" alt="After the Proposal!">
-    </a>
-    <a href="img/Ring1.jpg" title="K ♥ A">
-    <img src="img/thumbnails/Ring1.jpg" alt="K ♥ A">
-    </a>
-    <a href="img/Ring2.jpg" title="Love You Always">
-    <img src="img/thumbnails/Ring2.jpg" alt="Love You Always">
-    </a>
-    <a href="img/Ring4.jpg" title="The Ring!">
-    <img src="img/thumbnails/Ring4.jpg" alt="The Ring!">
-    </a>
-    <a href="img/bg.jpg" title="The Proposal Spot">
-    <img src="img/thumbnails/bg.jpg" alt="The Proposal Spot">
-    </a>
-    <a href="img/beach.jpg" title="Florida Beach">
-    <img src="img/thumbnails/beach.jpg" alt="Florida Beach">
-    </a>
-    <a href="img/bundled.jpg" title="Snowed In 2014">
-    <img src="img/thumbnails/bundled.jpg" alt="Snowed In 2014">
-    </a>
-    <a href="img/christmas.jpg" title="Christmas Time">
-    <img src="img/thumbnails/christmas.jpg" alt="Christmas Time">
-    </a>
-    <a href="img/colts1.jpg" title="Colts Games">
-    <img src="img/thumbnails/colts1.jpg" alt="Colts Games">
-    </a>
-    <a href="img/colts2.jpg" title="Colts Games">
-    <img src="img/thumbnails/colts2.jpg" alt="Colts Games">
-    </a>
-    <a href="img/selfie2.jpg" title="Colts Games">
-    <img src="img/thumbnails/selfie2.jpg" alt="Colts Games">
-    </a>
-    <a href="img/nd.jpg" title="Touchdown Jesus">
-    <img src="img/thumbnails/nd.jpg" alt="Touchdown Jesus">
-    </a>
-    <a href="img/selfie.jpg" title="Indians Game">
-    <img src="img/thumbnails/selfie.jpg" alt="Indians Game">
-    </a>
-    <a href="img/wine.jpg" title="Michigan Wine Tasting">
-    <img src="img/thumbnails/wine.jpg" alt="Michigan Wine Tasting">
-    </a>
-</div>
+    <div class="container paragraph">
 
-<!-- The Gallery as lightbox dialog, should be a child element of the document body -->
-<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
-    <div class="slides"></div>
-    <h3 class="title"></h3>
-    <a class="prev">‹</a>
-    <a class="next">›</a>
-    <a class="close">×</a>
-    <a class="play-pause"></a>
-    <ol class="indicator"></ol>
-</div>
-</div> <!--/jumbotron-->
-</div> <!--/container-->
+      <!-- Main component for a primary marketing message or call to action -->
+        <div class="jumbotron">
+            <h2 class="header">Andrea Butiste</h2>
+            <p class="paragraph">We couldn't be more excited. We look forward to what the future has to hold and are so blessed to be able to share it with you all!</p>
+            <h2 class="header">Kail Keusch</h2>
+            <p class="paragraph">We couldn't be more excited. We look forward to what the future has to hold and are so blessed to be able to share it with you all!</p>
+            <h2 class="header">How We Met</h2>
+            <p class="paragraph">We couldn't be more excited. We look forward to what the future has to hold and are so blessed to be able to share it with you all!</p>
+        </div> <!-- /jumbotron -->
+    </div> <!-- /container -->
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -130,14 +85,13 @@
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/Gallery/js/blueimp-gallery.min.js"></script>
     <script>
-    document.getElementById('links').onclick = function (event) {
-        event = event || window.event;
-        var target = event.target || event.srcElement,
-        link = target.src ? target.parentNode : target,
-        options = {index: link, event: event},
-        links = this.getElementsByTagName('a');
-        blueimp.Gallery(links, options);
-    };
+        blueimp.Gallery(
+            document.getElementById('links').getElementsByTagName('a'),
+            {
+                container: '#blueimp-gallery-carousel',
+                carousel: true
+            }
+        );
     </script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -147,7 +101,7 @@
     
       ga('create', 'UA-47036323-3', 'andreapluskail.com');
       ga('send', 'pageview');
-    
+
     </script>
   </body>
 </html>
