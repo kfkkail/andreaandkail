@@ -22,12 +22,8 @@ body {
     text-align: center;
 }
 
-.header {
-    font-family: 'Lobster', cursive;
-}
-
 /* for easier to read paragraphs */
-.paragraph {
+.paragraph-kfkkail {
     text-align: left;
     font-family: sans-serif;
 }
