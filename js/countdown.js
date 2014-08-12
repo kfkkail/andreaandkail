@@ -29,15 +29,15 @@ function calcage(secs, num1, num2) {
 
 function CountBack(secs) {
   if (secs < 0) {
-    document.getElementById("cntdwn").innerHTML = FinishMessage;
+    document.getElementById("cntdwnWedding").innerHTML = FinishMessage;
     return;
   }
-  DisplayStr = DisplayFormat.replace(/%%D%%/g, calcage(secs,86400,100000));
-  DisplayStr = DisplayStr.replace(/%%H%%/g, calcage(secs,3600,24));
-  DisplayStr = DisplayStr.replace(/%%M%%/g, calcage(secs,60,60));
-  DisplayStr = DisplayStr.replace(/%%S%%/g, calcage(secs,1,60));
+  DisplayStrWedding = DisplayFormat.replace(/%%D%%/g, calcage(secs,86400,100000));
+  DisplayStrWedding = DisplayStrWedding.replace(/%%H%%/g, calcage(secs,3600,24));
+  DisplayStrWedding = DisplayStrWedding.replace(/%%M%%/g, calcage(secs,60,60));
+  DisplayStrWedding = DisplayStrWedding.replace(/%%S%%/g, calcage(secs,1,60));
 
-  document.getElementById("cntdwn").innerHTML = DisplayStr;
+  document.getElementById("cntdwnWedding").innerHTML = DisplayStrWedding;
   if (CountActive)
     setTimeout("CountBack(" + (secs+CountStepper) + ")", SetTimeOutPeriod);
 }
@@ -50,7 +50,7 @@ TargetDate = "06/19/2015 05:00 PM";
 CountActive = true;
 CountStepper = -1;
 LeadingZero = false;
-DisplayFormat = "June 19, 2015 * %%D%% Days  Until the Wedding!!";
+DisplayFormat = "June 19, 2015 * %%D%% Days Until the Wedding!!";
 FinishMessage = "We're Married!!";
 
 if (typeof(BackColor)=="undefined")
