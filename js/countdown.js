@@ -46,12 +46,12 @@ function putspan(backcolor, forecolor) {
  document.write("<span id='cntdwn'></span>");
 }
 
-TargetDate = "05/03/2014 07:03 PM";
+TargetDate = "06/19/2015 05:00 PM";
 CountActive = true;
-CountStepper = 1;
+CountStepper = -1;
 LeadingZero = false;
-DisplayFormat = "May 3, 2014 * %%D%% Days %%H%% Hours Engaged!!";
-FinishMessage = "It is finally here!";
+DisplayFormat = "June 19, 2015 * %%D%% Days  Until the Wedding!!";
+FinishMessage = "We're Married!!";
 
 if (typeof(BackColor)=="undefined")
   BackColor = "white";
