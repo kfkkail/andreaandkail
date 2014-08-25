@@ -8,17 +8,16 @@ html {
 body {
     font-family: 'Lobster', cursive;
     overflow-y: scroll;
-    background:#fff url(../img/bg.jpg) no-repeat fixed center;
-    background-size:cover;
+    background:#9CBAB3;
 }
 
 .navbar {
-    background-color: rgba(238, 238, 238, 0.9);
+    background-color: rgba(238, 238, 238, 0.7);
     border-color:transparent;
 }
 
 .jumbotron {
-    background-color: rgba(238, 238, 238, 0.9);
+    background-color: rgba(238, 238, 238, 0.7);
     text-align: center;
 }
 
@@ -27,7 +26,7 @@ body {
 }
 
 .minitron {
-    background-color: rgba(238, 238, 238, 0.9);
+    background-color: rgba(238, 238, 238, 0.7);
     text-align: center;
     padding: 40px 15px;
 }
