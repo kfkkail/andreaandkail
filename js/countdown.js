@@ -8,77 +8,77 @@ name, Web address and this disclaimer is kept intact.
 Usage Sample:
 
 <script language="JavaScript">
-TargetDate = "12/31/2020 5:00 AM";
+TargetDate1 = "12/31/2020 5:00 AM";
 BackColor = "palegreen";
 ForeColor = "navy";
-CountActive = true;
-CountStepper = -1;
-LeadingZero = true;
-DisplayFormat = "%%D%% Days, %%H%% Hours, %%M%% Minutes, %%S%% Seconds.";
-FinishMessage = "It is finally here!";
+CountActive1 = true;
+CountStepper1 = -1;
+LeadingZero1 = true;
+DisplayFormat1 = "%%D%% Days, %%H%% Hours, %%M%% Minutes, %%S%% Seconds.";
+FinishMessage1 = "It is finally here!";
 </script>
 <script language="JavaScript" src="http://scripts.hashemian.com/js/countdown.js"></script>
 */
 
 function calcage(secs, num1, num2) {
   s = ((Math.floor(secs/num1))%num2).toString();
-  if (LeadingZero && s.length < 2)
+  if (LeadingZero1 && s.length < 2)
     s = "0" + s;
   return "<b>" + s + "</b>";
 }
 
 function CountBack(secs) {
   if (secs < 0) {
-    document.getElementById("cntdwnWedding").innerHTML = FinishMessage;
+    document.getElementById("cntdwnWedding").innerHTML = FinishMessage1;
     return;
   }
-  DisplayStrWedding = DisplayFormat.replace(/%%D%%/g, calcage(secs,86400,100000));
+  DisplayStrWedding = DisplayFormat1.replace(/%%D%%/g, calcage(secs,86400,100000));
   DisplayStrWedding = DisplayStrWedding.replace(/%%H%%/g, calcage(secs,3600,24));
   DisplayStrWedding = DisplayStrWedding.replace(/%%M%%/g, calcage(secs,60,60));
   DisplayStrWedding = DisplayStrWedding.replace(/%%S%%/g, calcage(secs,1,60));
 
   document.getElementById("cntdwnWedding").innerHTML = DisplayStrWedding;
-  if (CountActive)
-    setTimeout("CountBack(" + (secs+CountStepper) + ")", SetTimeOutPeriod);
+  if (CountActive1)
+    setTimeout("CountBack(" + (secs+CountStepper1) + ")", SetTimeOutPeriod);
 }
 
 function putspan(backcolor, forecolor) {
- document.write("<span id='cntdwn'></span>");
+ document.write("<span id='cntdwnWedding'></span>");
 }
 
-TargetDate = "06/19/2015 05:00 PM";
-CountActive = true;
-CountStepper = -1;
-LeadingZero = false;
-DisplayFormat = "June 19, 2015 * %%D%% Days Until the Wedding!!";
-FinishMessage = "We're Married!!";
+TargetDate1 = "06/19/2015 05:00 PM";
+CountActive1 = true;
+CountStepper1 = -1;
+LeadingZero1 = false;
+DisplayFormat1 = "June 19, 2015 * %%D%% Days Until the Wedding!!";
+FinishMessage1 = "We're Married!!";
 
 if (typeof(BackColor)=="undefined")
   BackColor = "white";
 if (typeof(ForeColor)=="undefined")
   ForeColor= "black";
-if (typeof(TargetDate)=="undefined")
-  TargetDate = "12/31/2020 5:00 AM";
-if (typeof(DisplayFormat)=="undefined")
-  DisplayFormat = "%%D%% Days, %%H%% Hours, %%M%% Minutes, %%S%% Seconds.";
-if (typeof(CountActive)=="undefined")
-  CountActive = true;
-if (typeof(FinishMessage)=="undefined")
-  FinishMessage = "";
-if (typeof(CountStepper)!="number")
-  CountStepper = -1;
-if (typeof(LeadingZero)=="undefined")
-  LeadingZero = true;
+if (typeof(TargetDate1)=="undefined")
+  TargetDate1 = "12/31/2020 5:00 AM";
+if (typeof(DisplayFormat1)=="undefined")
+  DisplayFormat1 = "%%D%% Days, %%H%% Hours, %%M%% Minutes, %%S%% Seconds.";
+if (typeof(CountActive1)=="undefined")
+  CountActive1 = true;
+if (typeof(FinishMessage1)=="undefined")
+  FinishMessage1 = "";
+if (typeof(CountStepper1)!="number")
+  CountStepper1 = -1;
+if (typeof(LeadingZero1)=="undefined")
+  LeadingZero1 = true;
 
 
-CountStepper = Math.ceil(CountStepper);
-if (CountStepper == 0)
-  CountActive = false;
-var SetTimeOutPeriod = (Math.abs(CountStepper)-1)*1000 + 990;
+CountStepper1 = Math.ceil(CountStepper1);
+if (CountStepper1 == 0)
+  CountActive1 = false;
+var SetTimeOutPeriod = (Math.abs(CountStepper1)-1)*1000 + 990;
 putspan(BackColor, ForeColor);
-var dthen = new Date(TargetDate);
+var dthen = new Date(TargetDate1);
 var dnow = new Date();
-if(CountStepper>0)
+if(CountStepper1>0)
   ddiff = new Date(dnow-dthen);
 else
   ddiff = new Date(dthen-dnow);
