@@ -6,12 +6,13 @@ html {
     overflow-y: hidden;
 }
 body {
-    font-family: 'Lobster', cursive;
+    font-family: 'Lato';
     overflow-y: scroll;
-    background:#9CBAB3;
+    background:#A1B8B2;
 }
 
 .navbar {
+    font-family: 'Lobster', cursive;
     background-color: rgba(238, 238, 238, 0.7);
     border-color:transparent;
 }
@@ -34,5 +35,4 @@ body {
 /* for easier to read paragraphs */
 .paragraph-kfkkail {
     text-align: left;
-    font-family: sans-serif;
 }

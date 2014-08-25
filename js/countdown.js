@@ -39,7 +39,7 @@ function CountBack(secs) {
 
   document.getElementById("cntdwnWedding").innerHTML = DisplayStrWedding;
   if (CountActive1)
-    setTimeout("CountBack(" + (secs+CountStepper1) + ")", SetTimeOutPeriod);
+    setTimeout("CountBack(" + (secs+CountStepper1) + ")", setTimeOutPeriod1);
 }
 
 function putspan(backcolor, forecolor) {
@@ -50,7 +50,7 @@ TargetDate1 = "06/19/2015 05:00 PM";
 CountActive1 = true;
 CountStepper1 = -1;
 LeadingZero1 = false;
-DisplayFormat1 = "June 19, 2015 * %%D%% Days Until the Wedding!!";
+DisplayFormat1 = "June 19, 2015 %%D%% Days Until the Wedding!!";
 FinishMessage1 = "We're Married!!";
 
 if (typeof(BackColor)=="undefined")
@@ -74,7 +74,7 @@ if (typeof(LeadingZero1)=="undefined")
 CountStepper1 = Math.ceil(CountStepper1);
 if (CountStepper1 == 0)
   CountActive1 = false;
-var SetTimeOutPeriod = (Math.abs(CountStepper1)-1)*1000 + 990;
+var SetTimeOutPeriod1 = (Math.abs(CountStepper1)-1)*1000 + 990;
 putspan(BackColor, ForeColor);
 var dthen = new Date(TargetDate1);
 var dnow = new Date();
