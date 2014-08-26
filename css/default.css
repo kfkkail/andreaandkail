@@ -42,4 +42,5 @@ body {
 .blueimp-gallery-carousel {
     background-color: rgba(238, 238, 238, 0);
     box-shadow: 0 0 0px #000;
+    text-align: center;
 }
