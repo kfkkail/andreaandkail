@@ -39,7 +39,7 @@ function CountBack(secs) {
 
   document.getElementById("cntdwnWedding").innerHTML = DisplayStrWedding;
   if (CountActive1)
-    setTimeout("CountBack(" + (secs+CountStepper1) + ")", setTimeOutPeriod1);
+    setTimeout("CountBack(" + (secs+CountStepper1) + ")", SetTimeOutPeriod1);
 }
 
 function putspan(backcolor, forecolor) {
