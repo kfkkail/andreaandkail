@@ -13,22 +13,27 @@ body {
     background-color: rgba(238, 238, 238, 1);
     border-color:transparent;
     z-index: 999;
+    text-align: center;
+}
+.navbar-default {
+  text-align: center;
 }
   .navbar-default .navbar-nav > .active > a, 
   .navbar-default .navbar-nav > .active > a:hover, 
   .navbar-default .navbar-nav > .active > a:focus {
-          color: #000;
+    color: #000;
     background: #A1B8B2;
    }
-   
 
-.navbar-header {
-    font-family: 'Arizonia', cursive;
+
+.navbar-brand {
+    font-family: 'Arizonia';
 }
 
 .akHeader {
+    text-align: center;
     font-family: 'Arizonia';
-    background:#fff url(../img/header_bak1.jpg) no-repeat fixed left bottom;
+    background:#fff url(../img/header.jpg) no-repeat fixed center bottom;
     background-size:cover;
     padding-top: 100px;
     padding-bottom: 100px;

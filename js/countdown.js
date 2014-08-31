@@ -50,7 +50,7 @@ TargetDate1 = "06/19/2015 05:00 PM";
 CountActive1 = true;
 CountStepper1 = -1;
 LeadingZero1 = false;
-DisplayFormat1 = "June 19, 2015 %%D%% Days Until the Wedding!!";
+DisplayFormat1 = "%%D%% Days Until the Wedding!!";
 FinishMessage1 = "We're Married!!";
 
 if (typeof(BackColor)=="undefined")
