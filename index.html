@@ -58,10 +58,10 @@
             </div>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Bride & Groom</a></li>
-                <li><a href="proposal.html">Wedding</a></li>
-                <li><a href="media.html">Accomodations</a></li>
-                <li><a>Registry</a></li>
+                <li><a href="#brideandgroom">Bride & Groom</a></li>
+                <li><a href="#wedding">Wedding</a></li>
+                <li><a href="#accomodations">Accomodations</a></li>
+                <li><a href="#registry">Registry</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
                 <li><a>
@@ -76,8 +76,8 @@
     <div class="container">
 
       <!-- Main component for a primary marketing message or call to action -->
-        <div class="akParagraph">
-            <section id="brideandgroom">
+        <section id="brideandgroom">
+            <div class="akParagraph">    
                 <h1 class="akHeader1">The Bride and Groom</h1>
                 <div class="row">
                     <div class="col-xs-6">
@@ -102,10 +102,10 @@
                             <a href="img/OnOneKnee.jpg" title="After the Proposal">
                             </a>
                         </div>
-            </section>
-        </div> <!--Bride and Groom paragraph -->
-        <div class="akParagraph">
-            <section id="wedding">
+            </div> <!--Bride and Groom paragraph -->
+        </section>
+        <section id="wedding">
+            <div class="akParagraph">
                 <h1 class="akHeader1">The Wedding</h1>
                 <div class="row">
                     <div class="col-xs-6">
@@ -128,10 +128,10 @@
                         <h4>*Cocktail Attire Requested</h4>
                     </div>
                 </div> <!-- /row -->
-            </section>
-        </div> <!--Wedding paragraph -->
-        <div class="akParagraph">
-            <section id="accomodations">
+            </div> <!--Wedding paragraph -->
+        </section>
+        <section id="accomodations">
+            <div class="akParagraph">
                 <h1 class="akHeader1">Accomodations</h1>
                 <h4>All travel arrangements are being handled by our Travel Agent Will Medina at Larimar Travels.</h4>
                     <div id="blueimp-gallery-carousel2" class="akDoradoPics blueimp-gallery blueimp-gallery-carousel">
@@ -262,8 +262,8 @@
                         </tr>
                     </tbody>
                 </table>
-            </section>
-        </div> <!-- Accomodations paragraph -->
+            </div> <!-- Accomodations paragraph -->
+        </section>
         <div class="akParagraph">
             <section id="registry">
                 <h1 class="akHeader1">Registry</h1>
@@ -315,6 +315,15 @@
     }
     }
     );
+    </script>
+    <script>
+        var offset = 60;
+
+        $('.navbar li a').click(function(event) {
+            event.preventDefault();
+            $($(this).attr('href'))[0].scrollIntoView();
+            scrollBy(0, -offset);
+        });
     </script>
   </body>
 </html>
