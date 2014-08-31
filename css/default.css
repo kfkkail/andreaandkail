@@ -34,12 +34,6 @@ body {
     font-size: 1.2em;
 }
 
-.minitron {
-    background-color: rgba(238, 238, 238, 0.7);
-    text-align: center;
-    padding: 40px 15px;
-}
-
 /* for easier to read paragraphs */
 .paragraph-kfkkail {
     text-align: left;
