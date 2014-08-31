@@ -1,13 +1,12 @@
-html,
-body {
-    height: 100%;
-}
 html {
-    overflow-y: hidden;
+    /*overflow-y: hidden;*/
 }
 body {
-    overflow-y: scroll;
+    position: relative;
+    /*overflow-y: scroll;*/
     background:#A1B8B2;
+    /*background:#fff url(../img/bg.jpg) no-repeat fixed center;
+    background-size:cover;*/
 }
 
 .navbar {
@@ -17,6 +16,13 @@ body {
 
 .navbar-header {
     font-family: 'Lobster', cursive;
+}
+
+.akNavbar {
+    position: relative;
+    padding-right: 60px;
+    padding-left: 60px;
+    border-radius: 6px;
 }
 
 .jumbotron {

@@ -14,7 +14,7 @@
     <meta http-equiv="pragma" content="no-cache" />
     <link rel="shortcut icon" href="img/favicon.ico">
 
-    <title>Andrea & Kail</title>
+    <title>A+K Wedding</title>
 
     <!-- Bootstrap core CSS -->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -34,10 +34,15 @@
     <![endif]-->
 </head>
 
-<body>
-    <!-- Fixed navbar -->
+<body data-spy="scroll" data-target=".akNavbar">
+    
     <div class="container">
-    <div class="navbar navbar-default" role="navigation">
+        <div class="jumbotron">
+            <h1>Andrea & Kail</h1>
+        </div> <!--/.jumbotron -->
+    
+    <!-- Fixed navbar -->
+    <div class="akNavbar navbar navbar-default" role="navigation">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -60,7 +65,7 @@
             </a></li>
           </ul>
         </div><!--/.nav-collapse -->
-        </div>
+    </div>
     </div>
 
 
@@ -113,7 +118,17 @@
     
       ga('create', 'UA-47036323-3', 'andreapluskail.com');
       ga('send', 'pageview');
-
+    </script>
+    <script>
+    $(window).scroll(function () {
+        console.log($(window).scrollTop());
+    if ($(window).scrollTop() > 230) {
+        $('.akNavbar').css('top', $(window).scrollTop()-230);
+    } else {
+        $('.akNavbar').css('top', 0);
+    }
+    }
+    );
     </script>
   </body>
 </html>
