@@ -35,13 +35,20 @@ body {
 }
 
 .akParagraph {
-  text-align: center;
+  text-align: left;
   background-color: rgba(238, 238, 238, 0.7);
   border-radius: 6px;
   padding-right: 60px;
   padding-left: 60px;
   padding-top: 40px;
   padding-bottom: 40px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.akHeader1 {
+    font-family: 'Arizonia';
+    text-align: left;
 }
 
 .jumbotron {
@@ -54,4 +61,7 @@ body {
     background-color: rgba(238, 238, 238, 0);
     box-shadow: 0 0 0px #000;
     text-align: center;
+}
+.akDoradoPics {
+
 }
