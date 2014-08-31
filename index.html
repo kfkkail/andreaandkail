@@ -20,7 +20,7 @@
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href='//fonts.googleapis.com/css?family=Lobster|Lato' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lobster|Lato|Arizonia' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="lib/Gallery/css/blueimp-gallery.min.css">
     <link href="css/default.css" rel="stylesheet">
 
@@ -35,46 +35,51 @@
 </head>
 
 <body data-spy="scroll" data-target=".akNavbar">
+    <div class="akHeader">
+        <div class="container">
+            <div class="jumbotron" style="background-color: rgba(0, 0, 0, 0);
+                color:white;">
+                <h1>Andrea & Kail</h1>
+                <h2>June 19, 2015</h2>
+            </div> <!--/.jumbotron -->
+        </div>
+    </div>
     
     <div class="container">
-        <div class="jumbotron">
-            <h1>Andrea & Kail</h1>
-        </div> <!--/.jumbotron -->
-    
-    <!-- Fixed navbar -->
-    <div class="akNavbar navbar navbar-default" role="navigation">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Andrea & Kail</a>
+    <!-- navbar -->
+        <div class="akNavbar navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Andrea & Kail</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                
+                <li><a href="proposal.html">Proposal</a></li>
+                <li><a href="media.html">Photo Album</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a>
+                    <script language="JavaScript" src="js/countdown.js"></script>
+                </a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
         </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            
-            <li><a href="proposal.html">Proposal</a></li>
-            <li><a href="media.html">Photo Album</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a>
-                <script language="JavaScript" src="js/countdown.js"></script>
-            </a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-    </div>
     </div>
 
 
-    <div class="container paragraph">
+    <div class="container">
 
       <!-- Main component for a primary marketing message or call to action -->
-        <div class="jumbotron">
-            <h1>Andrea & Kail</h1>
-            <h1>Are Getting Married!</h1>
+        <div class="akParagraph">
+            <h1>Please joing us for in celebration of our marriage</h1>
+            <h1>Andrea and Kail</h1>
             <h2>June 19, 2015 in Riviera Maya, Mexico</h2>
             <h3>We couldn't be more excited. We look forward to what the future has to hold and are so blessed to be able to share it with all of you!</h3>
             
@@ -91,7 +96,7 @@
                 <a href="img/Ring4.jpg" title="The Ring!">
                 </a>
             </div>
-        </div> <!-- /jumbotron -->
+        </div> <!-- /akParagraph -->
     </div> <!-- /container -->
 
 
@@ -122,8 +127,8 @@
     <script>
     $(window).scroll(function () {
         console.log($(window).scrollTop());
-    if ($(window).scrollTop() > 230) {
-        $('.akNavbar').css('top', $(window).scrollTop()-230);
+    if ($(window).scrollTop() > 478) {
+        $('.akNavbar').css('top', $(window).scrollTop()-478);
     } else {
         $('.akNavbar').css('top', 0);
     }
