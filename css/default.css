@@ -21,7 +21,7 @@ body {
 
 .akHeader {
     font-family: 'Arizonia';
-    background:#fff url(../img/header_bak2.jpg) no-repeat fixed left;
+    background:#fff url(../img/header_bak1.jpg) no-repeat fixed left bottom;
     background-size:cover;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -35,14 +35,18 @@ body {
 }
 
 .akParagraph {
-  padding: 40px 15px;
   text-align: center;
   background-color: rgba(238, 238, 238, 0.7);
   border-radius: 6px;
+  padding-right: 60px;
+  padding-left: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .jumbotron {
-    background-color: rgba(238, 238, 238, 0.7);
+    background-color: rgba(0, 0, 0, 0);
+    color:white;
     text-align: center;
 }
 
