@@ -34,18 +34,16 @@ body {
     border-radius: 6px;
 }
 
+.akParagraph {
+  padding: 40px 15px;
+  text-align: center;
+  background-color: rgba(238, 238, 238, 0.7);
+  border-radius: 6px;
+}
+
 .jumbotron {
     background-color: rgba(238, 238, 238, 0.7);
     text-align: center;
-}
-
-.jumbotron p {
-    font-size: 1.2em;
-}
-
-/* for easier to read paragraphs */
-.paragraph-kfkkail {
-    text-align: left;
 }
 
 .blueimp-gallery-carousel {
