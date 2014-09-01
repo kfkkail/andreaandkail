@@ -35,7 +35,7 @@
 </head>
 
 <body data-spy="scroll" data-target=".akNavbar" data-offset="60">
-    <div class="akHeader">
+    <div class="akHeader" id="top">
         <div class="container">
             <div class="jumbotron">
                 <h1>Andrea & Kail</h1>
@@ -47,15 +47,12 @@
     <div class="container">
     <!-- navbar -->
         <div class="akNavbar navbar navbar-default" role="navigation">
-            <a class="navbar-brand" href="#">Andrea & Kail</a>
-            <div class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
+            <ul class="nav nav-justified">
                 <li><a href="#brideandgroom">Bride & Groom</a></li>
                 <li><a href="#wedding">Wedding</a></li>
                 <li><a href="#accomodations">Accomodations</a></li>
                 <li><a href="#registry">Registry</a></li>
-              </ul>
-            </div><!--/.nav-collapse -->
+            </ul>
         </div>
     </div>
 
@@ -295,9 +292,16 @@
     </script>
     <script>
     $(window).scroll(function () {
+        var heightOffset = $("#top.akHeader").height()+200;
+        var multiplier = 1;
+
+        if (heightOffset < 450) {
+            multiplier = 0;
+        }
+        console.log(heightOffset);
         //console.log($(window).scrollTop());
-    if ($(window).scrollTop() > 478) {
-        $('.akNavbar').css('top', $(window).scrollTop()-478);
+    if ($(window).scrollTop() > heightOffset) {
+        $('.akNavbar').css('top', multiplier*($(window).scrollTop()-heightOffset));
     } else {
         $('.akNavbar').css('top', 0);
     }
