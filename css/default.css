@@ -25,6 +25,7 @@ body {
   .navbar-default .nav-justified > .active > a:focus {
     color: #000;
     background: #A1B8B2;
+    border-radius: 6px;
    }
 
 .akHeader {

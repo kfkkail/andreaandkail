@@ -34,7 +34,7 @@
     <![endif]-->
 </head>
 
-<body data-spy="scroll" data-target=".akNavbar" data-offset="60">
+<body data-spy="scroll" data-target=".akNavbar" data-offset="0">
     <div class="akHeader" id="top">
         <div class="container">
             <div class="jumbotron">
@@ -77,15 +77,8 @@
                         <p>I managed a Tuesday night indoor 6’s volleyball team and one of our team members wasn’t going to be able to make it for the last week of the season. It was tournament time, so we really wanted to play well. One of my teammates, Taylor Simonis, said he knew a girl that could sub for us. That girl was Andrea. Taylor introduced her to the team and we started playing. The first thing I noticed is that Andrea was really good at volleyball. She could set really well and could pretty much dig and pass with accuracy anything that came her way. We ended up winning the tournament! After we were done playing, we went to bleachers to relax and Andrea came and talked with me. She asked about what I did. We had a nice little conversation. We parted ways and she went to talk with Taylor before heading out. Mitch Evans came to talk with me and told me how much Andrea seemed interested in me. I kind of put it off and was like, no way. She just wanted to make small talk. After that night, I caught myself thinking about her. I wanted to spend some more time with her and get to know her. So, I reached out to Taylor to get her contact info and invited her to play on my sand volleyball team for the summer. She said yes! We started messaging back and forth more frequently after that and started to get to know each other. I was new to the Indy volleyball scene and jumped at any opportunity to meet new volleyball folks or even sub for teams who needed players. I got a call one night from a friend I had recently met asking me to sub, as they had another girl team member who couldn’t make it to their tournament game that night. I was there in 10 minutes! Little did I know that girl I was subbing for was Kail’s ex girlfriend. Awesome, right? Yah, no. After we stomped the other team, Kail so briskly released me from my duties as their all-star setter and passer for the night. The mutual friend walked me to the door, as Kail sat on the bench conversing with his ex. It wasn’t love at first sight though, I’ll tell that.</p>
                     <h3>The Engagement</h3>
                         <p>Andrea had to travel for a work event and wanted to spend the weekend before in Nashville, TN. Kail agreed that would be awesome and make for a nice little mini vacation before spending the next week apart. :-( Andrea and Kail had reservations for dinner in downtown Nashville on Saturday night. Before leaving, Kail insisted on bringing the big DSLR camera bag (and tripod, hint, hint) to get a picture of downtown Nashville together. They took the hotel shuttle downtown and started walking around. Kail had the brilliant idea of getting a view of downtown Nashville from the pedestrian bridge overlooking the main skyline. It took a little walking and a little convincing because as soon as they got on the bridge, Kail insisted they get to the other side of the river to find a better spot for the “picture”. After finding THE spot, Andrea got ready for the picture while Kail got the camera setup for a timed photo (he actually started a video). Kail came over while Andrea asked how long it took for the camera to take a picture. He said, “Oh, I don’t know, 10 seconds?”. After waiting, Kail turned towards her and said “Andrea, I love you...” Andrea responded right away “Oh my gosh, what are you doing??” and turned away covering her face. He turned her around, got on one knee, and popped the question. She said YES!!</p>
-                        <!-- The Gallery as inline carousel, can be positioned anywhere on the page -->
-                        <div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel">
-                            <div class="slides"></div>
-                        </div>
 
-                        <div id="links">
-                            <a href="img/OnOneKnee-square.jpg">
-                            </a>
-                        </div>
+                        <img src="img/OnOneKnee-square.jpg" class="img-responsive img-rounded" alt="Responsive image">
             </div> <!--Bride and Groom paragraph -->
         </section>
         <section id="wedding">
@@ -207,11 +200,24 @@
                 <p>Other room categories are available per request. If you have any questions, please contact Will and you will get a response within 48 hours:
                 </p>
                 <br>
+                <div class="row">
+                    <div class="col-xs-6 col-md-4" style="text-align: center">
+                        <button type="button" class="btn btn-primary btn-lg">Request a Quote</button>
+                    </div>
+                    <div class="col-xs-6 col-md-4" style="text-align: center">
+                        <button type="button" class="btn btn-primary btn-lg">Make a Payment</button>
+                    </div>
+                    <div class="col-xs-6 col-md-4" style="text-align: center">
+                        <button type="button" class="btn btn-primary btn-lg">Book Online</button>
+                    </div>
+                </div>
+                <br>
                 <h4>Will Medina, Travel Agent</h4>
                 <h4>Ph: 414-248-8539</h4>
                 <h4>Will@larimartravels.com</h4>
                 <h4>www.facebook.com/LarimarTravels </h4>
                 <h4>www.LarimarTravels.com</h4>
+                <br>
                 <h3>Flights Pricing</h3>
                 <p>Larimar Travels is happy to offer Andrea and Kail's guests air transportation booking service when booked at the same time as the accommodations.  Unfortunately, we are not able to service the flights needs those utilizing mile rewards simply because the airlines will not discuss loyalty redemptions with anyone other than the member. If you have miles that you would like to use, feel free to do so and we are happy to assist you with the land portion of the trip so you can qualify for all the wedding group amenities and have access to the private events.
                 </p>
@@ -249,6 +255,7 @@
                 </table>
             </div> <!-- Accomodations paragraph -->
         </section>
+        
         <div class="akParagraph">
             <section id="registry">
                 <h1 class="akHeader1">Registry</h1>
@@ -266,13 +273,6 @@
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/Gallery/js/blueimp-gallery.min.js"></script>
     <script>
-        blueimp.Gallery(
-            document.getElementById('links').getElementsByTagName('a'),
-            {
-                container: '#blueimp-gallery-carousel',
-                carousel: true
-            }
-        );
         blueimp.Gallery(
             document.getElementById('links2').getElementsByTagName('a'),
             {
