@@ -81,8 +81,8 @@ body {
 }
 .akParagraph p {
   margin-bottom: 15px;
-  font-size: 21px;
-  font-weight: 200;
+  /*font-size: 21px;
+  font-weight: 200;*/
 }
 .akParagraph {
   border-radius: 6px;
