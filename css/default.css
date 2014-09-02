@@ -74,7 +74,7 @@ body {
   padding: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #eee;
+  background-color: rgba(238, 238, 238, 0.7);
 }
 .akParagraph h1,
 .akParagraph .h1 {
@@ -122,6 +122,6 @@ body {
     box-shadow: 0 0 0px #000;
     text-align: center;
 }
-.akDoradoPics {
-
+.img-responsive {
+    margin: 0 auto;
 }
