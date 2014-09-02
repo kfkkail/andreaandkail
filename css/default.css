@@ -32,7 +32,7 @@ body {
 .akHeader {
     text-align: center;
     font-family: 'Arizonia';
-    background:#fff url(../img/header.jpg) no-repeat fixed center bottom;
+    background:#fff url(../img/header.jpg) no-repeat fixed;
     background-size:cover;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -133,4 +133,41 @@ body {
       margin-bottom: 15px;
   }
 
+}
+
+/* Capture all the mobile devices and fix the background-attachment*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .akHeader {
+    background-attachment: fixed;
+  }
+}
+
+@media only screen and (-webkit-device-pixel-ratio:.75){
+  .akHeader {
+    background-attachment: fixed;
+  }
+}
+
+@media only screen and (-webkit-device-pixel-ratio:1){
+  .akHeader {
+    background-attachment: fixed;
+  }
+}
+
+@media only screen and (-webkit-device-pixel-ratio:1.5){
+  .akHeader {
+    background-attachment: fixed;
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  .akHeader {
+    background-attachment: fixed;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .akHeader {
+    background-attachment: fixed;
+  }
 }
