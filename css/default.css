@@ -4,7 +4,7 @@ html {
 body {
     position: relative;
     /*overflow-y: scroll;*/
-    background:#A1B8B2;
+    background:#A3BAB4;
     /*background:#fff url(../img/bg.jpg) no-repeat fixed center;
     background-size:cover;*/
     font-family: 'Lato';
@@ -25,7 +25,7 @@ body {
   .navbar-default .nav-justified > .active > a:hover, 
   .navbar-default .nav-justified > .active > a:focus {
     color: #000;
-    background: #A1B8B2;
+    background: #A3BAB4;
     border-radius: 6px;
    }
 
@@ -33,9 +33,9 @@ body {
     text-align: center;
     font-family: 'Arizonia';
     background:#fff url(../img/header.jpg) no-repeat fixed;
-    background-size:cover;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    width: 25%;
+    padding-top: 150px;
+    padding-bottom: 150px;
 }
 
 /*.akNavbar {
@@ -125,6 +125,21 @@ body {
 }
 .img-responsive {
     margin: 0 auto;
+}
+
+.thumb {
+    background-color: black;
+    margin-right: 10px;
+    margin-bottom: 0;
+    float: left;
+
+    border: 4px solid #090909;
+
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
 }
 
 @media (max-width: 991px) {
