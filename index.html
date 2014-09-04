@@ -24,9 +24,6 @@
     <link rel="stylesheet" href="lib/Gallery/css/blueimp-gallery.min.css">
     <link href="css/default.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -41,11 +38,11 @@
                 <h1>Andrea & Kail</h1>
                 <h2>June 19, 2015</h2>
             </div> <!--/.jumbotron -->
-        </div>
+        </div> <!--/.container -->
     </div>
     
+    <!-- akNavbar -->
     <div class="container">
-    <!-- navbar -->
         <div class="akNavbar navbar navbar-default" role="navigation">
             <ul class="nav nav-justified">
                 <li><a href="#brideandgroom">Bride & Groom</a></li>
@@ -53,13 +50,12 @@
                 <li><a href="#accomodations">Accomodations</a></li>
                 <li><a href="#registry">Registry</a></li>
             </ul>
-        </div>
-    </div>
-
+        </div> <!-- akNavbar -->
+    </div>  <!-- container -->
 
     <div class="container">
-
-      <!-- Main component for a primary marketing message or call to action -->
+    
+        <!-- BRIDEANDGROOM -->
         <section id="brideandgroom">
             <div class="akParagraph">    
                 <h1 class="akHeader1">The Bride and Groom</h1>
@@ -83,8 +79,10 @@
                         <p>Andrea had to travel for a work event and wanted to spend the weekend before in Nashville, TN. Kail agreed that would be awesome and make for a nice little mini vacation before spending the next week apart. :-( Andrea and Kail had reservations for dinner in downtown Nashville on Saturday night. Before leaving, Kail insisted on bringing the big DSLR camera bag (and tripod, hint, hint) to get a picture of downtown Nashville together. They took the hotel shuttle downtown and started walking around. Kail had the brilliant idea of getting a view of downtown Nashville from the pedestrian bridge overlooking the main skyline. It took a little walking and a little convincing because as soon as they got on the bridge, Kail insisted they get to the other side of the river to find a better spot for the “picture”. After finding THE spot, Andrea got ready for the picture while Kail got the camera setup for a timed photo (he actually started a video). Kail came over while Andrea asked how long it took for the camera to take a picture. He said, “Oh, I don’t know, 10 seconds?”. After waiting, Kail turned towards her and said “Andrea, I love you...” Andrea responded right away “Oh my gosh, what are you doing??” and turned away covering her face. He turned her around, got on one knee, and popped the question. She said YES!!</p>
 
                         <img src="img/OnOneKnee-square.jpg" class="img-responsive img-rounded" alt="Responsive image">
-            </div> <!--Bride and Groom paragraph -->
-        </section>
+            </div> <!--BrideandGroom akParagraph -->
+        </section> <!-- /.brideandGroom -->
+        
+        <!-- WEDDING -->
         <section id="wedding">
             <div class="akParagraph">
                 <h1 class="akHeader1">The Wedding</h1>
@@ -93,8 +91,10 @@
                     <h4>5 PM at the El Dorado Royale Pier Riviera Maya, Mexico</h4>
                     <br>
                     <img src="img/eldorado/image00.png" class="img-responsive img-rounded" alt="Responsive image">
-            </div> <!--Wedding paragraph -->
-        </section>
+            </div> <!-- Wedding akParagraph -->
+        </section> <!-- /.wedding -->
+        
+        <!-- ACCOMODATIONS -->
         <section id="accomodations">
             <div class="akParagraph">
                 <h1 class="akHeader1">Accomodations</h1>
@@ -243,9 +243,10 @@
                         </tr>
                     </tbody>
                 </table>
-            </div> <!-- Accomodations paragraph -->
-        </section>
+            </div> <!-- Accomodations akParagraph -->
+        </section> <!-- /.accomodations -->
         
+        <!-- REGISTRY -->
         <div class="akParagraph">
             <section id="registry">
                 <h1 class="akHeader1">Registry</h1>
@@ -253,8 +254,9 @@
                 <p>In addition, here are the other registries.</p>
                 <p>Love Notes for Andrea and Kail</p>
                 <p>Send an email to admin@andreapluskail.com</p>
-            </section>
-        </div> <!-- Registry paragraph -->
+            </section>  <!-- /.registry -->
+        </div> <!-- Registry akParagraph -->
+        
     </div> <!-- /container -->
 
 
@@ -274,6 +276,7 @@
         );
     </script>
    <!-- <script>
+   // script to measure google analytics
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -283,6 +286,7 @@
       ga('send', 'pageview');
     </script>-->
     <script>
+    // script to keep the Navbar at the top of the page when scrolling down the page, but also keep it from covering the Header
     $(window).scroll(function () {
         var heightOffset = $("#top.akHeader").height()+300;
         var multiplier = 1;
@@ -301,6 +305,7 @@
     );
     </script>
     <script>
+    // script to determine offset from scroll to position after clicking element in Navbar
         var offset = 60;
 
         $('.navbar li a').click(function(event) {
