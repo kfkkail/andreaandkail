@@ -182,7 +182,6 @@ body {
 /* Social Media Icons*/
 ul {
     overflow: auto;
-    font-size: 25px;
 }
  
 ul li {
@@ -201,6 +200,10 @@ ul li a i {
     margin-right: 10px;
     padding-top: 15%;
     transition: all 0.2s ease-in-out;
+}
+
+.akSocial {
+  font-size: 25px;
 }
  
 .fa-facebook {
