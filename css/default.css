@@ -182,6 +182,7 @@ body {
 /* Social Media Icons*/
 ul {
     overflow: auto;
+    padding: 0px;
 }
  
 ul li {
