@@ -120,6 +120,10 @@ body {
     border-radius: 2px;
 }
 
+.fa-facebook-square {
+  
+}
+
 @media (max-width: 991px) {
 
   [class*="col-"]{
@@ -173,4 +177,41 @@ body {
 
 /*Tablets*/
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+
+/* Social Media Icons*/
+ul {
+    overflow: auto;
+    font-size: 25px;
+}
+ 
+ul li {
+    list-style-type: none;
+    float: left;
+}
+ 
+ul li a i {
+    background: #205D7A;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 25px;
+    text-align: center;
+    margin-right: 10px;
+    padding-top: 15%;
+    transition: all 0.2s ease-in-out;
+}
+ 
+.fa-facebook {
+    background:#3b5998
+} 
+.fa-envelope-o {
+    background:#A3BAB4
+}
+.fa-link {
+    background:#A3BAB4
+}
+ul li a i:hover {
+    opacity: .7;
 }
