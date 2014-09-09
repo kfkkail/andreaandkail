@@ -60,7 +60,7 @@ body {
 }
 .akParagraph p {
   margin-bottom: 15px;
-  /*font-size: 21px;
+  font-size: 16px;
   font-weight: 200;*/
 }
 .akParagraph {
@@ -218,4 +218,8 @@ ul li a i {
 }
 ul li a i:hover {
     opacity: .7;
+}
+
+#akItalics {
+  font-style: italic;
 }
