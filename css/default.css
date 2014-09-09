@@ -23,11 +23,11 @@ body {
 
 .navbar-default .nav-justified > li > a,
 .navbar-default .nav-justified > li > a:hover {
-  color: #A3BAB4;
+  color: #000;
 }
 
 .navbar-default .nav-justified > li > a:hover {
-  color: #000;
+  color: #A3BAB4;
 }
 
 .navbar-default .nav-justified > .active > a, 
@@ -120,8 +120,8 @@ body {
     border-radius: 2px;
 }
 
-.fa-facebook-square {
-  
+.akEngageImg {
+  width: 50%;
 }
 
 @media (max-width: 991px) {
