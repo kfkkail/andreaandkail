@@ -52,6 +52,7 @@
                 <li><a href="#wedding">Wedding</a></li>
                 <li><a href="#accomodations">Accomodations</a></li>
                 <li><a href="#registry">Registry</a></li>
+                <li><a href="#photos">Photo Album</a></li>
             </ul>
         </div> <!-- akNavbar -->
     </div>  <!-- container -->
@@ -253,8 +254,8 @@
         </section> <!-- /.accomodations -->
         
         <!-- REGISTRY -->
-        <div class="akParagraph">
-            <section id="registry">
+        <section id="registry">
+            <div class="akParagraph">
                 <h1 class="akHeader1">Registry</h1>
                 <h4>Your presence at our wedding is truly the greatest gift we could receive.</h4>
                 <h4>Your presence at our wedding is the absolute best gift we could ever ask for.</h4>
@@ -262,9 +263,49 @@
                 <ul class='akSocialul'>
                 <li class='akSocialli'><a href="mailto:kfkkail+lovenotes@gmail.com"><i class="akSociali fa fa-envelope-o"></i></a></li>
                 </ul>
-            </section>  <!-- /.registry -->
-        </div> <!-- Registry akParagraph -->
-        
+            </div> <!-- Registry akParagraph -->
+        </section>  <!-- /.registry -->
+
+        <!-- PHOTOS -->
+        <section id="photos">
+            <div class="akParagraph">
+                <h1 class="akHeader1">Photo Album</h1>
+                <div id="blueimp-gallery-carousel" class="akDoradoPics blueimp-gallery blueimp-gallery-carousel">
+                        <div class="slides"></div>
+                        <a class="prev">‹</a>
+                        <a class="next">›</a>
+                        <a class="close">×</a>
+                        <a class="play-pause"></a>
+                    </div>
+                    <div id="links">
+                        <a href="img/beach.jpg">
+                        </a>
+                        <a href="img/bg1.jpg">
+                        </a>
+                        <a href="img/bundled.jpg">
+                        </a>
+                        <a href="img/christmas.jpg">
+                        </a>
+                        <a href="img/colts1.jpg">
+                        </a>
+                        <a href="img/colts2.jpg">
+                        </a>
+                        <a href="img/nd.jpg">
+                        </a>
+                        <a href="img/ring4.jpg">
+                        </a>
+                        <a href="img/selfie.jpg">
+                        </a>
+                        <a href="img/selfie2.jpg">
+                        </a>
+                        <a href="img/wine.jpg">
+                        </a>
+                    </div>
+                    </p>
+                </ul>
+            </div> <!-- Registry akParagraph -->
+        </section>  <!-- /.registry -->
+
     </div> <!-- /container -->
 
 
@@ -279,6 +320,14 @@
             document.getElementById('links2').getElementsByTagName('a'),
             {
                 container: '#blueimp-gallery-carousel2',
+                carousel: true,
+                stretchImages: true
+            }
+        );
+        blueimp.Gallery(
+            document.getElementById('links').getElementsByTagName('a'),
+            {
+                container: '#blueimp-gallery-carousel',
                 carousel: true,
                 stretchImages: true
             }
