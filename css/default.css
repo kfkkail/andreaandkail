@@ -61,7 +61,7 @@ body {
 .akParagraph p {
   margin-bottom: 15px;
   font-size: 16px;
-  font-weight: 200;*/
+  font-weight: 200;
 }
 .akParagraph {
   border-radius: 6px;
@@ -180,17 +180,19 @@ body {
 }
 
 /* Social Media Icons*/
-ul {
+
+.akSocialul {
     overflow: auto;
     padding: 0px;
 }
  
-ul li {
+.akSocialli {
     list-style-type: none;
     float: left;
+    font-size: 25px;
 }
  
-ul li a i {
+.akSociali {
     background: #205D7A;
     color: #fff;
     width: 40px;
@@ -202,10 +204,6 @@ ul li a i {
     padding-top: 15%;
     transition: all 0.2s ease-in-out;
 }
-
-.akSocial {
-  font-size: 25px;
-}
  
 .fa-facebook {
     background:#3b5998
@@ -216,10 +214,15 @@ ul li a i {
 .fa-link {
     background:#A3BAB4
 }
-ul li a i:hover {
+.akSocialli:hover {
     opacity: .7;
 }
 
 #akItalics {
   font-style: italic;
+}
+
+#akList {
+  font-size: 16px;
+  font-weight: 200;
 }
