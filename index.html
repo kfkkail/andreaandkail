@@ -343,23 +343,7 @@
       ga('send', 'pageview');
     </script>-->
     <script>
-    // script to keep the Navbar at the top of the page when scrolling down the page, but also keep it from covering the Header
-    $(window).scroll(function () {
-        var heightOffset = $("#top.akHeader").height()+300;
-        var multiplier = 1;
-
-        if (heightOffset < 513) {
-            multiplier = 0;
-        }
-        //console.log(heightOffset);
-        //console.log($(window).scrollTop());
-    if ($(window).scrollTop() > heightOffset) {
-        $('.akNavbar').css('top', multiplier*($(window).scrollTop()-heightOffset));
-    } else {
-        $('.akNavbar').css('top', 0);
-    }
-    }
-    );
+    
     </script>
     <script>
     // script to determine offset from scroll to position after clicking element in Navbar
@@ -374,12 +358,41 @@
     <script>
     // Smooth scroll for in page links
         $(function(){
+
+            var animateoffset = 0;
+                    // script to keep the Navbar at the top of the page when scrolling down the page, but also keep it from covering the Header
+            $(window).scroll(function () {
+                var heightOffset = $("#top.akHeader").height()+300;
+                var multiplier = 1;
+
+                if (heightOffset < 513) {
+                    multiplier = 0;
+                }
+
+                //console.log(heightOffset);
+                //console.log($(window).scrollTop());
+                if ($(window).scrollTop() > heightOffset) {
+                    $('.akNavbar').css({
+                        "top" : (multiplier*($(window).scrollTop()-heightOffset-animateoffset)) + "px",
+                         "transition" : "all 0s ease-in-out"
+                    });
+                    animateoffset = 0;
+                    $('.akNavbar').css({
+                        "top" : (multiplier*($(window).scrollTop()-heightOffset-animateoffset)) + "px",
+                         "transition" : "all 0.25s ease-in-out"
+                    });
+                } else {
+                    $('.akNavbar').css('top', 0);
+                }
+            });
+            
             var target, scroll;
 
             $("a[href*=#]:not([href=#])").on("click", function(e) {
                 if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
                     target = $(this.hash);
                     target = target.length ? target : $("[id=" + this.hash.slice(1) + "]");
+                    animateoffset = 60;
 
                     if (target.length) {
                         if (typeof document.body.style.transitionProperty === 'string') {
@@ -407,7 +420,7 @@
                 }
             });
 
-            $("html").on("transitionend webkitTransitionEnd msTransitionEnd oTransitionEnd", function (e) {
+            $("html, akNavbar").on("transitionend webkitTransitionEnd msTransitionEnd oTransitionEnd", function (e) {
                 if (e.target == e.currentTarget && $(this).data("transitioning") === true) {
                     $(this).removeAttr("style").data("transitioning", false);
                     $("html, body").scrollTop(scroll);
