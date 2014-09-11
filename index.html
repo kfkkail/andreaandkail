@@ -394,13 +394,16 @@
                 if ($(window).scrollTop() > heightOffset) {
                     $('.akNavbar').css({
                         "top" : (multiplier*($(window).scrollTop()-heightOffset-animateoffset)) + "px",
-                         "transition" : "all 0s ease-in-out"
+                         "transition" : "all 0s"
                     });
-                    animateoffset = 0;
-                    $('.akNavbar').css({
-                        "top" : (multiplier*($(window).scrollTop()-heightOffset-animateoffset)) + "px",
-                         "transition" : "all 0.25s ease-in-out"
-                    });
+                    console.log(animateoffset)
+                    if (animateoffset == 60) {
+                        animateoffset = 0;
+                        $('.akNavbar').css({
+                            "top" : (multiplier*($(window).scrollTop()-heightOffset-animateoffset)) + "px",
+                             "transition" : "all 0.25s ease-in-out"
+                        });
+                    }
                 } else {
                     $('.akNavbar').css('top', 0);
                 }
@@ -413,6 +416,7 @@
                     target = $(this.hash);
                     target = target.length ? target : $("[id=" + this.hash.slice(1) + "]");
                     animateoffset = 60;
+                    console.log("click");
 
                     if (target.length) {
                         if (typeof document.body.style.transitionProperty === 'string') {
@@ -440,7 +444,7 @@
                 }
             });
 
-            $("html, akNavbar").on("transitionend webkitTransitionEnd msTransitionEnd oTransitionEnd", function (e) {
+            $("html").on("transitionend webkitTransitionEnd msTransitionEnd oTransitionEnd", function (e) {
                 if (e.target == e.currentTarget && $(this).data("transitioning") === true) {
                     $(this).removeAttr("style").data("transitioning", false);
                     $("html, body").scrollTop(scroll);
