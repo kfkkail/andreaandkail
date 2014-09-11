@@ -125,6 +125,16 @@ body {
   width: 50%;
 }
 
+.btn-primary {
+  background-color: #A3BAB4;
+  border-color: #A3BAB4;
+  color: #000;
+}
+.btn-primary:hover {
+  background-color: #A3BAB4;
+  border-color: #A3BAB4;
+}
+
 @media (max-width: 991px) {
 
   [class*="col-"]{
