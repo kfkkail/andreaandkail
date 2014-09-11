@@ -128,11 +128,14 @@ body {
 .btn-primary {
   background-color: #A3BAB4;
   border-color: #A3BAB4;
-  color: #000;
 }
 .btn-primary:hover {
+  color: #000;
   background-color: #A3BAB4;
   border-color: #A3BAB4;
+}
+.btn-lg {
+  font-weight: bold;
 }
 
 @media (max-width: 991px) {
