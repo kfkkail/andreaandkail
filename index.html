@@ -269,7 +269,7 @@
         <section id="photos">
             <div class="akParagraph">
                 <h1 class="akHeader1">Photo Album</h1>
-                <div id="blueimp-gallery-carousel" class="akDoradoPics blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls">
+                <div id="blueimp-gallery-carousel" class="akAndreaKailPics blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls">
                         <div class="slides"></div>
                         <a class="prev">‹</a>
                         <a class="next">›</a>
@@ -277,6 +277,7 @@
                     </div>
                     <div id="links">
                         <a href="img/beach.jpg">
+                        <div style="text-align: center"><button type="button" class="btn btn-primary btn-lg">FullScreen Pictures</button></div>
                         </a>
                         <a href="img/bg1.jpg">
                         </a>
@@ -300,7 +301,16 @@
                         </a>
                     </div>
                     </p>
-                </ul>
+                    
+                <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+                    <div class="slides"></div>
+                    <h3 class="title"></h3>
+                    <a class="prev">‹</a>
+                    <a class="next">›</a>
+                    <a class="close">×</a>
+                    <a class="play-pause"></a>
+                    <ol class="indicator"></ol>
+                </div>
             </div> <!-- Registry akParagraph -->
         </section>  <!-- /.registry -->
 
@@ -322,6 +332,7 @@
                 stretchImages: true
             }
         );
+        
         blueimp.Gallery(
             document.getElementById('links').getElementsByTagName('a'),
             {
@@ -330,6 +341,15 @@
                 stretchImages: true
             }
         );
+        
+        document.getElementById('links').onclick = function (event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = {index: link, event: event, fullScreen: false},
+        links = this.getElementsByTagName('a');
+        blueimp.Gallery(links, options);
+        };
     </script>
    <!-- <script>
    // script to measure google analytics
