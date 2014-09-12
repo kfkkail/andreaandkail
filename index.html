@@ -53,6 +53,7 @@
                 <li><a href="#accomodations">Accomodations</a></li>
                 <li><a href="#registry">Registry</a></li>
                 <li><a href="#photos">Photo Album</a></li>
+                <li><a href="#" onClick="return submitWindow();">RSVP</a></li>
             </ul>
         </div> <!-- akNavbar -->
     </div>  <!-- container -->
@@ -98,9 +99,6 @@
                     El Dorado Royale Pier<br>
                     Riviera Maya, Mexico</h3>
                     <br>
-                    <p>We are requesting that you let us know.</p>
-                    <button type="button" class="btn btn-primary btn-lg" onClick=window.open('https://docs.google.com/forms/d/1nML26fTFgQsz50QZTvXL4y6AK0Vbr0ekHMvUn96M7o8/viewform?usp=send_form');>R S V P</button>
-                    <br><br>
                     <img src="img/eldorado/image00.png" class="img-responsive img-rounded" alt="Responsive image">
             </div> <!-- Wedding akParagraph -->
         </section> <!-- /.wedding -->
@@ -369,14 +367,11 @@
     
     </script>
     <script>
-    // script to determine offset from scroll to position after clicking element in Navbar
-     /*   var offset = 60;
-
-        $('.navbar li a').click(function(event) {
-            event.preventDefault();
-            $($(this).attr('href'))[0].scrollIntoView();
-            scrollBy(0, -offset);
-        });*/
+    function submitWindow() {
+		        // URL, name and attributes
+		        window.open('https://docs.google.com/forms/d/1nML26fTFgQsz50QZTvXL4y6AK0Vbr0ekHMvUn96M7o8/viewform?usp=send_form','windowNew','width=500, height=850, scrollbars=yes');
+		        return true;
+		    }
     </script>
     <script>
     // Smooth scroll for in page links
