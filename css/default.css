@@ -6,6 +6,10 @@ body {
     font-family: 'Lato';
 }
 
+a {
+    cursor: pointer;
+}
+
 .navbar {
     background-color: rgba(238, 238, 238, 1);
     border-color:transparent;
