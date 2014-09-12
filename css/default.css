@@ -125,14 +125,17 @@ body {
   width: 50%;
 }
 
-.btn-primary {
+.btn-primary,
+.btn-primary:focus {
   background-color: #A3BAB4;
   border-color: #A3BAB4;
+  outline:none;
 }
-.btn-primary:hover {
+.btn-primary:hover{
   color: #000;
   background-color: #A3BAB4;
   border-color: #A3BAB4;
+  outline:none;
 }
 .btn-lg {
   font-weight: bold;
