@@ -130,12 +130,16 @@ a {
 }
 
 .btn-primary,
-.btn-primary:focus {
+.btn-primary:focus,
+.btn,
+.btn:focus {
+  color: #FFF;
   background-color: #A3BAB4;
   border-color: #A3BAB4;
   outline:none;
 }
-.btn-primary:hover{
+.btn-primary:hover,
+.btn:hover{
   color: #000;
   background-color: #A3BAB4;
   border-color: #A3BAB4;

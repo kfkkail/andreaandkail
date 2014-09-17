@@ -135,8 +135,9 @@
                         <a class="next">›</a>
                         <a class="play-pause"></a>
                     </div>
-                    <div id="links2">
+                    <div id="links2" style="text-align: center">
                         <a href="img/eldorado/image01.png">
+                        <button type="button" class="btn">FullScreen Photo Album</button>
                         </a>
                         <a href="img/eldorado/image02.png">
                         </a>
@@ -197,15 +198,16 @@
                     7 nights - Swim-up Jacuzzi Junior Suite $1,728 per person</p>
                     <br>
                 <h4>El Dorado Casitas Royale</h4>
-                <p>4 nights - Casita Suite $
+                <p>4 nights - Casita Suite $1,270.81 per person
                 <br>
-                4 nights - Swim-up Casita $</p>
-                <p>7 nights - Casita Suite $
+                4 nights - Swim-up Casita $1,523.47 per person</p>
+                <p>7 nights - Casita Suite $2,182.66 per person
                 <br>
-                7 nights - Swim-up Casita $</p>
+                7 nights - Swim-up Casita $2,624.83 per person</p>
                 <p>Other room categories are available per request. If you have any questions, please contact Will and you will receive a response within 48 hours.
                 </p>
-                <p>If you'd like to work with our Wedding Planner and Travel Agent, please click the Personalized Vacation Form button and complete the following form. Will Medina will plan a vacation personalized for you.</p>
+                <br>
+                <p>If you'd like to work with our Wedding Planner and Travel Agent, please click the Personalized Vacation Form button and complete the following form. We encourage you to work with Will Medina to plan and customize your own personalized vacation. -Andrea and Kail</p>
                 <br>
                 <div class="row">
                     <div class="col-md-4" style="text-align: center">
@@ -289,7 +291,7 @@
                     </div>
                     <div id="links" style="text-align: center">
                         <a href="img/beach.jpg">
-                        <button type="button" class="btn btn-primary btn-lg">FullScreen Photo Album</button>
+                        <button type="button" class="btn">FullScreen Photo Album</button>
                         </a>
                         <a href="img/bg1.jpg">
                         </a>
@@ -314,7 +316,6 @@
                         <a href="img/InForTheKiss.jpg">
                         </a>
                     </div>
-                    </p>
                     
                 <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
                     <div class="slides"></div>
@@ -360,14 +361,23 @@
         event = event || window.event;
         var target = event.target || event.srcElement,
         link = target.src ? target.parentNode : target,
-        options = {index: link, event: event, fullScreen: false},
+        options = {index: link, event: event, fullScreen: false, stretchImages: true},
+        links = this.getElementsByTagName('a');
+        blueimp.Gallery(links, options);
+        };
+
+        document.getElementById('links2').onclick = function (event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = {index: link, event: event, fullScreen: false, stretchImages: true},
         links = this.getElementsByTagName('a');
         blueimp.Gallery(links, options);
         };
     </script>
    <<script>
    // script to measure google analytics
-      /*(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     /* (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
