@@ -54,12 +54,12 @@
     <div class="container">
         <div class="akNavbar navbar navbar-default" role="navigation">
             <ul class="nav nav-justified">
-                <li><a href="#brideandgroom">Bride & Groom</a></li>
-                <li><a href="#wedding">Wedding</a></li>
-                <li><a href="#accomodations">Accomodations</a></li>
-                <li><a href="#registry">Registry</a></li>
-                <li><a href="#photos">Photo Album</a></li>
-                <li><a onClick="return submitWindow();">RSVP</a></li>
+                <li><a id="brideandgroom" href="#brideandgroom">Bride & Groom</a></li>
+                <li><a id="wedding" href="#wedding">Wedding</a></li>
+                <li><a id="accomodations" href="#accomodations">Accomodations</a></li>
+                <li><a id="registry" href="#registry">Registry</a></li>
+                <li><a id="photos" href="#photos">Photo Album</a></li>
+                <li><a id="rsvpClick" onClick="return submitWindow();">RSVP</a></li>
             </ul>
         </div> <!-- akNavbar -->
     </div>  <!-- container -->
@@ -143,7 +143,7 @@
                     </div>
                     <div id="links2" style="text-align: center">
                         <a href="img/eldorado/image01.png">
-                        <button type="button" class="btn">FullScreen Photo Album</button>
+                        <button id="doradoFullscreen" type="button" class="btn">FullScreen Photo Album</button>
                         </a>
                         <a href="img/eldorado/image02.png">
                         </a>
@@ -216,23 +216,23 @@
                 <p>Hey everyone! We encourage you to work with Will Medina to plan and customize your own personalized vacation. He is flexible and will make himself available for any questions or thoughts you may have. Please do not hesitate to reach out directly using the contact information provided below. He's here to make sure you have an unforgettable vacation. Happy Traveling!  -Andrea and Kail</p>
                 <br>
                 <div style="text-align: center">
-                    <button type="button" class="btn btn-primary btn-lg" onClick=window.open('https://www.emailmeform.com/builder/form/OF14RTAeb8cSKDd0b');>Personalized<wbr> Vacation Form</button>
+                    <button id="personalizedVacationForm" type="button" class="btn btn-primary btn-lg" onClick=window.open('https://www.emailmeform.com/builder/form/OF14RTAeb8cSKDd0b');>Personalized<wbr> Vacation Form</button>
                 </div>
                 <br>
                 <div style="text-align: center">
-                    <button type="button" class="btn" onClick=window.open('https://www.emailmeform.com/builder/form/ja6g3dFpk5D5B');>Make a Payment</button>
+                    <button id="makeAPayment" type="button" class="btn" onClick=window.open('https://www.emailmeform.com/builder/form/ja6g3dFpk5D5B');>Make a Payment</button>
                 </div>
                 <br>    
                 <div style="text-align: center">
-                    <button type="button" class="btn" onClick=window.open('http://www.funjet.com/Deals/Deal.aspx?deal=140&vendor=FJ1&promocode=GPKAIL&plcode=33046056MM');>Book Online</button>
+                    <button id="bookOnline" type="button" class="btn" onClick=window.open('http://www.funjet.com/Deals/Deal.aspx?deal=140&vendor=FJ1&promocode=GPKAIL&plcode=33046056MM');>Book Online</button>
                 </div>
                 <br>
                 <h4>Will Medina, Travel Agent</h4>
                 <h4>Ph: 414-248-8539</h4>
                 <ul class='akSocialul'>
-                    <li class='akSocialli'><a href="mailto:Will@larimartravels.com"><i class="akSociali fa fa-envelope-o"></i></a></li>
-                    <li class='akSocialli'><a href="https://www.Facebook.com/LarimarTravels"><i class="akSociali fa fa-facebook"></i></a></li>
-                    <li class='akSocialli'><a href="http://www.LarimarTravels.com"><i class="akSociali fa fa-link"></i></a></li>
+                    <li class='akSocialli'><a id="emailWill" href="mailto:Will@larimartravels.com"><i class="akSociali fa fa-envelope-o"></i></a></li>
+                    <li class='akSocialli'><a id="facebookWill" href="https://www.Facebook.com/LarimarTravels"><i class="akSociali fa fa-facebook"></i></a></li>
+                    <li class='akSocialli'><a id="websiteWill" href="http://www.LarimarTravels.com"><i class="akSociali fa fa-link"></i></a></li>
                 </ul>
                 <br>
                 <h3>Airfare</h3>
@@ -297,7 +297,7 @@
                     </div>
                     <div id="links" style="text-align: center">
                         <a href="img/beach.jpg">
-                        <button type="button" class="btn">FullScreen Photo Album</button>
+                        <button id="albumFullscreen" type="button" class="btn">FullScreen Photo Album</button>
                         </a>
                         <a href="img/bg1.jpg">
                         </a>
@@ -383,17 +383,75 @@
     </script>
    <script>
    // script to measure google analytics
-      /*(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
     
       ga('create', 'UA-47036323-3', 'andreapluskail.com');
       ga('require', 'displayfeatures');
-      ga('send', 'pageview');*/
+      ga('send', 'pageview');
     </script>
-    <script>
-    
+    <script type="text/javascript">
+        $(document).ready(function() {
+        
+            $('#rsvpClick').click(function() {
+                ga('send', 'event',  'button', 'click', 'rsvpClick');
+            });
+            
+            $('#doradoFullscreen').click(function() {
+                ga('send', 'event',  'button', 'click', 'doradoFullscreen');
+            });
+            
+            $('#bookOnline').click(function() {
+                ga('send', 'event',  'button', 'click', 'bookOnline');
+            });
+            
+            $('#makeAPayment').click(function() {
+                ga('send', 'event',  'button', 'click', 'makeAPayment');
+            });
+            
+            $('#personalizedVacationForm').click(function() {
+                ga('send', 'event',  'button', 'click', 'personalizedVacationForm');
+            });
+            
+            $('#albumFullscreen').click(function() {
+                ga('send', 'event',  'button', 'click', 'albumFullscreen');
+            });
+            
+            $('#brideandgroom').click(function() {
+                ga('send', 'event',  'navbar', 'click', 'brideandgroom');
+            });
+            
+            $('#wedding').click(function() {
+                ga('send', 'event',  'navbar', 'click', 'wedding');
+            });
+            
+            $('#accomodations').click(function() {
+                ga('send', 'event',  'navbar', 'click', 'accomodations');
+            });
+            
+            $('#registry').click(function() {
+                ga('send', 'event',  'navbar', 'click', 'registry');
+            });
+            
+            $('#photos').click(function() {
+                ga('send', 'event',  'navbar', 'click', 'photos');
+            });
+            
+            $('#emailWill').click(function() {
+                ga('send', 'event',  'contactInfoWill', 'click', 'emailWill');
+            });
+            
+            $('#websiteWill').click(function() {
+                ga('send', 'event',  'contactInfoWill', 'click', 'websiteWill');
+            });
+            
+            $('#facebookWill').click(function() {
+                ga('send', 'event',  'contactInfoWill', 'click', 'facebookWill');
+            });
+
+        });
     </script>
     <script>
     //for RSVP button in navbar
@@ -424,7 +482,7 @@
                         "top" : (multiplier*($(window).scrollTop()-heightOffset-animateoffset)) + "px",
                          "transition" : "all 0s"
                     });
-                    console.log(animateoffset)
+                    //console.log(animateoffset)
                     if (animateoffset == 60) {
                         animateoffset = 0;
                         $('.akNavbar').css({
