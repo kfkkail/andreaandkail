@@ -54,11 +54,11 @@
     <div class="container">
         <div class="akNavbar navbar navbar-default" role="navigation">
             <ul class="nav nav-justified">
-                <li><a id="brideandgroom" href="#brideandgroom">Bride & Groom</a></li>
-                <li><a id="wedding" href="#wedding">Wedding</a></li>
-                <li><a id="accomodations" href="#accomodations">Accomodations</a></li>
-                <li><a id="registry" href="#registry">Registry</a></li>
-                <li><a id="photos" href="#photos">Photo Album</a></li>
+                <li><a id="brideandgroomTr" href="#brideandgroom">Bride & Groom</a></li>
+                <li><a id="weddingTr" href="#wedding">Wedding</a></li>
+                <li><a id="accomodationsTr" href="#accomodations">Accomodations</a></li>
+                <li><a id="registryTr" href="#registry">Registry</a></li>
+                <li><a id="photosTr" href="#photos">Photo Album</a></li>
                 <li><a id="rsvpClick" onClick="return submitWindow();">RSVP</a></li>
             </ul>
         </div> <!-- akNavbar -->
@@ -419,23 +419,23 @@
                 ga('send', 'event',  'button', 'click', 'albumFullscreen');
             });
             
-            $('#brideandgroom').click(function() {
+            $('#brideandgroomTr').click(function() {
                 ga('send', 'event',  'navbar', 'click', 'brideandgroom');
             });
             
-            $('#wedding').click(function() {
+            $('#weddingTr').click(function() {
                 ga('send', 'event',  'navbar', 'click', 'wedding');
             });
             
-            $('#accomodations').click(function() {
+            $('#accomodationsTr').click(function() {
                 ga('send', 'event',  'navbar', 'click', 'accomodations');
             });
             
-            $('#registry').click(function() {
+            $('#registryTr).click(function() {
                 ga('send', 'event',  'navbar', 'click', 'registry');
             });
             
-            $('#photos').click(function() {
+            $('#photosTr').click(function() {
                 ga('send', 'event',  'navbar', 'click', 'photos');
             });
             
