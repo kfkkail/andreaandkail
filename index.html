@@ -280,7 +280,7 @@
                 <h4>Your presence at our wedding is the absolute best gift we could ever ask for.</h4>
                 <h2>Love Notes for Andrea and Kail</h2>
                 <ul class='akSocialul'>
-                <li class='akSocialli'><a href="mailto:kfkkail+lovenotes@gmail.com"><i class="akSociali fa fa-envelope-o"></i></a></li>
+                <li class='akSocialli'><a id="loveNotes" href="mailto:kfkkail+lovenotes@gmail.com"><i class="akSociali fa fa-envelope-o"></i></a></li>
                 </ul>
             </div> <!-- Registry akParagraph -->
         </section>  <!-- /.registry -->
@@ -449,6 +449,10 @@
             
             $('#facebookWill').click(function() {
                 ga('send', 'event',  'contactInfoWill', 'click', 'facebookWill');
+            });
+            
+            $('#loveNotes').click(function() {
+                ga('send', 'event',  'loveNotes', 'click', 'loveNotes');
             });
 
         });
