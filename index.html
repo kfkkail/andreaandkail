@@ -137,9 +137,9 @@
                 <p>Additionally, you have the opportunity to explore the beautiful Mexican culture by purchasing tours prior to departure. Contact Will for more information.
                     <div id="blueimp-gallery-carousel2" class="akDoradoPics blueimp-gallery blueimp-gallery-carousel">
                         <div class="slides"></div>
-                        <a class="prev">‹</a>
-                        <a class="next">›</a>
-                        <a class="play-pause"></a>
+                        <a id="akDoradoPicsPrev" class="prev">‹</a>
+                        <a id="akDoradoPicsNext" class="next">›</a>
+                        <a id="akDoradoPicsPlay-Pause" class="play-pause"></a>
                     </div>
                     <div id="links2" style="text-align: center">
                         <a href="img/eldorado/image01.png">
@@ -291,9 +291,9 @@
                 <h1 class="akHeader1">Photo Album</h1>
                 <div id="blueimp-gallery-carousel" class="akAndreaKailPics blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls">
                         <div class="slides"></div>
-                        <a class="prev">‹</a>
-                        <a class="next">›</a>
-                        <a class="play-pause"></a>
+                        <a id="akAndreaKailPicsPrev" class="prev">‹</a>
+                        <a id="akAndreaKailPicsNext" class="next">›</a>
+                        <a id="akAndreaKailPicsPlay-Pause" class="play-pause"></a>
                     </div>
                     <div id="links" style="text-align: center">
                         <a href="img/beach.jpg">
@@ -326,10 +326,10 @@
                 <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
                     <div class="slides"></div>
                     <h3 class="title"></h3>
-                    <a class="prev">‹</a>
-                    <a class="next">›</a>
-                    <a class="close">×</a>
-                    <a class="play-pause"></a>
+                    <a id="fullscreenPrev" class="prev">‹</a>
+                    <a id="fullscreenNext" class="next">›</a>
+                    <a id="fullscreenClose" class="close">×</a>
+                    <a id="fullscreenPlay-Pause" class="play-pause"></a>
                     <ol class="indicator"></ol>
                 </div>
             </div> <!-- Registry akParagraph -->
@@ -454,7 +454,48 @@
             $('#loveNotes').click(function() {
                 ga('send', 'event',  'loveNotes', 'click', 'loveNotes');
             });
+            
+            // Picture controls
 
+            $('#akDoradoPicsPrev').click(function() {
+                ga('send', 'event',  'picControls', 'click', 'akDoradoPicsPrev');
+            });
+            
+            $('#akDoradoPicsNext').click(function() {
+                ga('send', 'event',  'picControls', 'click', 'akDoradoPicsNext');
+            });
+            
+            $('#akDoradoPicsPlay-Pause').click(function() {
+                ga('send', 'event',  'picControls', 'click', 'akDoradoPicsPlay-Pause');
+            });
+
+            $('#akAndreaKailPicsPrev').click(function() {
+                ga('send', 'event',  'picControls', 'click', 'akAndreaKailPicsPrev');
+            });
+            
+            $('#akAndreaKailPicsNext').click(function() {
+                ga('send', 'event',  'picControls', 'click', 'akAndreaKailPicsNext');
+            });
+            
+            $('#akAndreaKailPicsPlay-Pause').click(function() {
+                ga('send', 'event',  'picControls', 'click', 'akAndreaKailPicsPlay-Pause');
+            });
+    
+            $('#fullscreenPrev').click(function() {
+                ga('send', 'event',  'picControls', 'click', 'fullscreenPrev');
+            });
+            
+            $('#fullscreenNext').click(function() {
+                ga('send', 'event',  'picControls', 'click', 'fullscreenNext');
+            });
+            
+            $('#fullscreenClose').click(function() {
+                ga('send', 'event',  'picControls', 'click', 'fullscreenClose');
+            });
+            
+            $('#fullscreenPlay-Pause').click(function() {
+                ga('send', 'event',  'picControls', 'click', 'fullscreenPlay-Pause');
+            });
         });
     </script>
     <script>
