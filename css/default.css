@@ -10,11 +10,15 @@ a {
     cursor: pointer;
 }
 
+.akfirstContainer {
+  padding-top: 70px;
+}
+
 .akContainer {
-  top: 0;
   right: 0;
   left: 0;
   z-index: 999;
+  position: fixed;
 }
 
 .navbar {
@@ -55,7 +59,7 @@ a {
     font-weight: bold;
     background:#fff url(../img/cheers.jpg) no-repeat fixed center;
     background-size: cover;
-    padding-top: 300px;
+    padding-top: 299px;
     padding-bottom: 0px;
 }
 

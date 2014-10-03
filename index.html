@@ -40,7 +40,7 @@
     <![endif]-->
 </head>
 
-<body data-spy="scroll" data-target=".akNavbar" data-offset="61">
+<body data-spy="scroll" data-target=".akNavbar" data-offset="60">
     <div class="akHeader" id="top">
         <div class="container">
             <div class="jumbotron">
@@ -64,7 +64,7 @@
         </div> <!-- akNavbar -->
     </div>  <!-- container -->
 
-    <div class="container">
+    <div class="container akfirstContainer">
     
         <!-- BRIDEANDGROOM -->
         <section id="brideandgroom">
@@ -511,19 +511,20 @@
         $(function(){
             var animateOffset;
             // script to keep the Navbar at the top of the page when scrolling down the page, but also keep it from covering the Header
-            $(window).scroll(function () {
+            $(window).on('scroll', function() {
                 var heightOffset = $("#top.akHeader").height()+299;
                 var multiplier = 1;
+                console.log($(window).scrollTop());
 
                 if ($(window).scrollTop() > heightOffset) {
-                    animateOffset = 0;
+                    animateOffset = 1;
                     $('.akContainer').css({
-                        "position" : "fixed"
+                        "top" : 0 + "px"
                     });
                 } else {
-                    animateOffset = 62;
+                    animateOffset = 0;
                     $('.akContainer').css({
-                        "position" : "static"
+                        "top" : heightOffset-$(window).scrollTop() + "px"
                     });
                 }
             });
@@ -535,7 +536,12 @@
                     target = $(this.hash);
                     target = target.length ? target : $("[id=" + this.hash.slice(1) + "]");
                     console.log("click");
-
+                    if (animateOffset == 0) {
+                        $('.akContainer').css({
+                            "top" : "-100px"
+                        });
+                    }
+                    
                     if (target.length) {
                         if (typeof document.body.style.transitionProperty === 'string') {
                             e.preventDefault();
@@ -548,7 +554,6 @@
                                 scroll = avail;
                             }
                             
-                            console.log(animateOffset);
                             $("html").css({
                                 "margin-top" : ( $(window).scrollTop() - scroll ) + "px",
                                 "transition" : "1s ease-in-out"
