@@ -40,7 +40,7 @@
     <![endif]-->
 </head>
 
-<body data-spy="scroll" data-target=".akNavbar" data-offset="60">
+<body data-spy="scroll" data-target=".akHeader" data-offset="60">
     <div class="akHeader" id="top">
         <div class="container">
             <div class="jumbotron">
@@ -51,7 +51,7 @@
     </div>
     
     <!-- akNavbar -->
-    <div class="container">
+    <div class="container akContainer">
         <div class="akNavbar navbar navbar-default" role="navigation">
             <ul class="nav nav-justified">
                 <li><a id="brideandgroomTr" href="#brideandgroom">Bride & Groom</a></li>
@@ -64,7 +64,7 @@
         </div> <!-- akNavbar -->
     </div>  <!-- container -->
 
-    <div class="container">
+    <div class="container akfirstContainer">
     
         <!-- BRIDEANDGROOM -->
         <section id="brideandgroom">
@@ -344,6 +344,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/Gallery/js/blueimp-gallery.min.js"></script>
+    <script src="lib/jquery.scrollTo/jquery.scrollTo.min.js"></script>
     <script>
         blueimp.Gallery(
             document.getElementById('links2').getElementsByTagName('a'),
@@ -393,7 +394,7 @@
       ga('send', 'pageview');*/
     </script>
     <script type="text/javascript">
-        $(document).ready(function() {
+        /*$(document).ready(function() {
         
             $('#rsvpClick').click(function() {
                 ga('send', 'event',  'button', 'click', 'rsvpClick');
@@ -496,7 +497,7 @@
             $('#fullscreenPlay-Pause').click(function() {
                 ga('send', 'event',  'picControls', 'click', 'fullscreenPlay-Pause');
             });
-        });
+        });*/
     </script>
     <script>
     //for RSVP button in navbar
@@ -509,79 +510,38 @@
     <script>
     // Smooth scroll for in page links
         $(function(){
-
-            var animateoffset = 0;
-                    // script to keep the Navbar at the top of the page when scrolling down the page, but also keep it from covering the Header
-            $(window).scroll(function () {
-                var heightOffset = $("#top.akHeader").height()+300;
+            var animateOffset;
+            var navbarTarget;
+            // script to keep the Navbar at the top of the page when scrolling down the page, but also keep it from covering the Header
+            $(window).on('scroll', function() {
+                var heightOffset = $("#top.akHeader").height()+299;
                 var multiplier = 1;
+                //console.log(heightOffset - $(window).scrollTop());
 
-                if (heightOffset < 513) {
-                    multiplier = 0;
-                }
-
-                //console.log(heightOffset);
-                //console.log($(window).scrollTop());
                 if ($(window).scrollTop() > heightOffset) {
-                    $('.akNavbar').css({
-                        "top" : (multiplier*($(window).scrollTop()-heightOffset-animateoffset)) + "px",
-                         "transition" : "all 0s"
-                    });
-                    //console.log(animateoffset)
-                    if (animateoffset == 60) {
-                        animateoffset = 0;
-                        $('.akNavbar').css({
-                            "top" : (multiplier*($(window).scrollTop()-heightOffset-animateoffset)) + "px",
-                             "transition" : "all 0.25s ease-in-out"
-                        });
-                    }
+                    animateOffset = 1;
+                    navbarTarget = 0;
                 } else {
-                    $('.akNavbar').css('top', 0);
+                    animateOffset = 0;
+                    navbarTarget = heightOffset-$(window).scrollTop()
                 }
+                
+                $('.akContainer').css({
+                    "top" : navbarTarget + "px"
+                });
             });
             
-            var target, scroll;
+        	$("a[href*=#]:not([href=#])").on("click", function(e) {
 
-            $("a[href*=#]:not([href=#])").on("click", function(e) {
-                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-                    target = $(this.hash);
-                    target = target.length ? target : $("[id=" + this.hash.slice(1) + "]");
-                    animateoffset = 60;
-                    console.log("click");
-
-                    if (target.length) {
-                        if (typeof document.body.style.transitionProperty === 'string') {
-                            e.preventDefault();
-                          
-                            var avail = $(document).height() - $(window).height();
-
-                            scroll = target.offset().top;
-                          
-                            if (scroll > avail) {
-                                scroll = avail;
-                            }
-
-                            $("html").css({
-                                "margin-top" : ( $(window).scrollTop() - scroll ) + "px",
-                                "transition" : "1s ease-in-out"
-                            }).data("transitioning", true);
-                        } else {
-                            $("html, body").animate({
-                                scrollTop: scroll
-                            }, 1000);
-                            return;
-                        }
-                    }
-                }
-            });
-
-            $("html").on("transitionend webkitTransitionEnd msTransitionEnd oTransitionEnd", function (e) {
-                if (e.target == e.currentTarget && $(this).data("transitioning") === true) {
-                    $(this).removeAttr("style").data("transitioning", false);
-                    $("html, body").scrollTop(scroll);
-                    return;
-                }
-            });
+        		$.scrollTo(
+        			$(this).attr("href"),
+        			{
+        				duration: 1000,
+        				offset: { 'left':0, 'top':-0.06*$(window).height() }
+        			}
+        		);
+        			e.preventDefault();
+        	})
         });
     </script>
   </body>

@@ -10,6 +10,17 @@ a {
     cursor: pointer;
 }
 
+.akfirstContainer {
+  padding-top: 70px;
+}
+
+.akContainer {
+  right: 0;
+  left: 0;
+  z-index: 999;
+  position: fixed;
+}
+
 .navbar {
     background-color: rgba(238, 238, 238, 1);
     border-color:transparent;
@@ -48,7 +59,7 @@ a {
     font-weight: bold;
     background:#fff url(../img/cheers.jpg) no-repeat fixed center;
     background-size: cover;
-    padding-top: 300px;
+    padding-top: 299px;
     padding-bottom: 0px;
 }
 
@@ -159,6 +170,12 @@ a {
 
 /* Capture all the mobile devices and fix the background-attachment*/
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .akContainer {
+    position: static;
+  }
+  .akfirstContainer {
+    padding-top: 0px;
+  }
   .akHeader {
     background-attachment: scroll;
   }
@@ -168,6 +185,12 @@ a {
 }
 
 @media only screen and (-webkit-device-pixel-ratio:.75){
+  .akContainer {
+    position: static;
+  }
+  .akfirstContainer {
+    padding-top: 0px;
+  }
   .akHeader {
     background-attachment: scroll;
   }
@@ -177,6 +200,12 @@ a {
 }
 
 @media only screen and (-webkit-device-pixel-ratio:1.5){
+  .akContainer {
+    position: static;
+  }
+  .akfirstContainer {
+    padding-top: 0px;
+  }
   .akHeader {
     background-attachment: scroll;
   }
@@ -186,6 +215,12 @@ a {
 }
 
 @media only screen and (max-device-width: 480px) {
+  .akContainer {
+    position: static;
+  }
+  .akfirstContainer {
+    padding-top: 0px;
+  }
   .akHeader {
     background-attachment: scroll;
   }
@@ -195,6 +230,12 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
+  .akContainer {
+    position: static;
+  }
+  .akfirstContainer {
+    padding-top: 0px;
+  }
   .thumb {
     width: 40%;
   }
