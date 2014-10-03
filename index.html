@@ -40,7 +40,7 @@
     <![endif]-->
 </head>
 
-<body data-spy="scroll" data-target=".akNavbar" data-offset="60">
+<body data-spy="scroll" data-target=".akHeader" data-offset="60">
     <div class="akHeader" id="top">
         <div class="container">
             <div class="jumbotron">
@@ -344,6 +344,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/Gallery/js/blueimp-gallery.min.js"></script>
+    <script src="lib/Gallery/lib/jquery.scrollTo/jquery.scrollTo.min.js"></script>
     <script>
         blueimp.Gallery(
             document.getElementById('links2').getElementsByTagName('a'),
@@ -510,26 +511,41 @@
     // Smooth scroll for in page links
         $(function(){
             var animateOffset;
+            var navbarTarget;
             // script to keep the Navbar at the top of the page when scrolling down the page, but also keep it from covering the Header
             $(window).on('scroll', function() {
                 var heightOffset = $("#top.akHeader").height()+299;
                 var multiplier = 1;
-                console.log($(window).scrollTop());
+                //console.log(heightOffset - $(window).scrollTop());
 
                 if ($(window).scrollTop() > heightOffset) {
                     animateOffset = 1;
-                    $('.akContainer').css({
-                        "top" : 0 + "px"
-                    });
+                    navbarTarget = 0;
                 } else {
                     animateOffset = 0;
-                    $('.akContainer').css({
-                        "top" : heightOffset-$(window).scrollTop() + "px"
-                    });
+                    navbarTarget = heightOffset-$(window).scrollTop()
                 }
+                
+                $('.akContainer').css({
+                    "top" : navbarTarget + "px"
+                });
             });
             
-            var target, scroll;
+            var navigation_links = $("#akNavbar ul li a");
+            
+        	navigation_links.click( function(event) {
+
+        		$.scrollTo(
+        			$(this).attr("href"),
+        			{
+        				duration: 1000,
+        				offset: { 'left':0, 'top':-0.08*$(window).height() }
+        			}
+        		);
+        			event.preventDefault();
+        	})
+            
+            /*var target, scroll;
 
             $("a[href*=#]:not([href=#])").on("click", function(e) {
                 if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -538,7 +554,7 @@
                     console.log("click");
                     if (animateOffset == 0) {
                         $('.akContainer').css({
-                            "top" : "-100px"
+                            "top" : "-50px"
                         });
                     }
                     
@@ -549,6 +565,9 @@
                             var avail = $(document).height() - $(window).height();
 
                             scroll = target.offset().top;
+                            console.log($(window).scrollTop());
+                            console.log(scroll);
+                            console.log($(window).scrollTop() - scroll);
                           
                             if (scroll > avail) {
                                 scroll = avail;
@@ -559,8 +578,13 @@
                                 "transition" : "1s ease-in-out"
                             }).data("transitioning", true);
                         } else {
+                            console.log("animate");
+                            scroll = target.offset().top;
+                            console.log($(window).scrollTop());
+                            console.log(scroll);
+                            console.log($(window).scrollTop() - scroll);
                             $("html, body").animate({
-                                scrollTop: scroll
+                                marginTop: ( $(window).scrollTop() - scroll ) + "px"
                             }, 1000);
                             return;
                         }
@@ -575,7 +599,7 @@
                     return;
                 }
             });
-        });
+        });*/
     </script>
   </body>
 </html>
