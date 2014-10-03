@@ -40,7 +40,7 @@
     <![endif]-->
 </head>
 
-<body data-spy="scroll" data-target=".akNavbar" data-offset="60">
+<body data-spy="scroll" data-target=".akNavbar" data-offset="61">
     <div class="akHeader" id="top">
         <div class="container">
             <div class="jumbotron">
@@ -51,7 +51,7 @@
     </div>
     
     <!-- akNavbar -->
-    <div class="container">
+    <div class="container akContainer">
         <div class="akNavbar navbar navbar-default" role="navigation">
             <ul class="nav nav-justified">
                 <li><a id="brideandgroomTr" href="#brideandgroom">Bride & Groom</a></li>
@@ -393,7 +393,7 @@
       ga('send', 'pageview');*/
     </script>
     <script type="text/javascript">
-        $(document).ready(function() {
+        /*$(document).ready(function() {
         
             $('#rsvpClick').click(function() {
                 ga('send', 'event',  'button', 'click', 'rsvpClick');
@@ -496,7 +496,7 @@
             $('#fullscreenPlay-Pause').click(function() {
                 ga('send', 'event',  'picControls', 'click', 'fullscreenPlay-Pause');
             });
-        });
+        });*/
     </script>
     <script>
     //for RSVP button in navbar
@@ -509,34 +509,22 @@
     <script>
     // Smooth scroll for in page links
         $(function(){
-
-            var animateoffset = 0;
-                    // script to keep the Navbar at the top of the page when scrolling down the page, but also keep it from covering the Header
+            var animateOffset;
+            // script to keep the Navbar at the top of the page when scrolling down the page, but also keep it from covering the Header
             $(window).scroll(function () {
-                var heightOffset = $("#top.akHeader").height()+300;
+                var heightOffset = $("#top.akHeader").height()+299;
                 var multiplier = 1;
 
-                if (heightOffset < 513) {
-                    multiplier = 0;
-                }
-
-                //console.log(heightOffset);
-                //console.log($(window).scrollTop());
                 if ($(window).scrollTop() > heightOffset) {
-                    $('.akNavbar').css({
-                        "top" : (multiplier*($(window).scrollTop()-heightOffset-animateoffset)) + "px",
-                         "transition" : "all 0s"
+                    animateOffset = 0;
+                    $('.akContainer').css({
+                        "position" : "fixed"
                     });
-                    //console.log(animateoffset)
-                    if (animateoffset == 60) {
-                        animateoffset = 0;
-                        $('.akNavbar').css({
-                            "top" : (multiplier*($(window).scrollTop()-heightOffset-animateoffset)) + "px",
-                             "transition" : "all 0.25s ease-in-out"
-                        });
-                    }
                 } else {
-                    $('.akNavbar').css('top', 0);
+                    animateOffset = 62;
+                    $('.akContainer').css({
+                        "position" : "static"
+                    });
                 }
             });
             
@@ -546,7 +534,6 @@
                 if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
                     target = $(this.hash);
                     target = target.length ? target : $("[id=" + this.hash.slice(1) + "]");
-                    animateoffset = 60;
                     console.log("click");
 
                     if (target.length) {
@@ -560,7 +547,8 @@
                             if (scroll > avail) {
                                 scroll = avail;
                             }
-
+                            
+                            console.log(animateOffset);
                             $("html").css({
                                 "margin-top" : ( $(window).scrollTop() - scroll ) + "px",
                                 "transition" : "1s ease-in-out"

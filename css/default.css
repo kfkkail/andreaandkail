@@ -10,6 +10,13 @@ a {
     cursor: pointer;
 }
 
+.akContainer {
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+}
+
 .navbar {
     background-color: rgba(238, 238, 238, 1);
     border-color:transparent;
