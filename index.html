@@ -344,7 +344,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/Gallery/js/blueimp-gallery.min.js"></script>
-    <script src="lib/Gallery/lib/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+    <script src="lib/jquery.scrollTo/jquery.scrollTo.min.js"></script>
     <script>
         blueimp.Gallery(
             document.getElementById('links2').getElementsByTagName('a'),
@@ -531,75 +531,19 @@
                 });
             });
             
-            var navigation_links = $("#akNavbar ul li a");
-            
-        	navigation_links.click( function(event) {
+        	$("a[href*=#]:not([href=#])").on("click", function(e) {
+        	    console.log("click");
 
         		$.scrollTo(
         			$(this).attr("href"),
         			{
         				duration: 1000,
-        				offset: { 'left':0, 'top':-0.08*$(window).height() }
+        				offset: { 'left':0, 'top':-0.06*$(window).height() }
         			}
         		);
-        			event.preventDefault();
+        			e.preventDefault();
         	})
-            
-            /*var target, scroll;
-
-            $("a[href*=#]:not([href=#])").on("click", function(e) {
-                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-                    target = $(this.hash);
-                    target = target.length ? target : $("[id=" + this.hash.slice(1) + "]");
-                    console.log("click");
-                    if (animateOffset == 0) {
-                        $('.akContainer').css({
-                            "top" : "-50px"
-                        });
-                    }
-                    
-                    if (target.length) {
-                        if (typeof document.body.style.transitionProperty === 'string') {
-                            e.preventDefault();
-                          
-                            var avail = $(document).height() - $(window).height();
-
-                            scroll = target.offset().top;
-                            console.log($(window).scrollTop());
-                            console.log(scroll);
-                            console.log($(window).scrollTop() - scroll);
-                          
-                            if (scroll > avail) {
-                                scroll = avail;
-                            }
-                            
-                            $("html").css({
-                                "margin-top" : ( $(window).scrollTop() - scroll ) + "px",
-                                "transition" : "1s ease-in-out"
-                            }).data("transitioning", true);
-                        } else {
-                            console.log("animate");
-                            scroll = target.offset().top;
-                            console.log($(window).scrollTop());
-                            console.log(scroll);
-                            console.log($(window).scrollTop() - scroll);
-                            $("html, body").animate({
-                                marginTop: ( $(window).scrollTop() - scroll ) + "px"
-                            }, 1000);
-                            return;
-                        }
-                    }
-                }
-            });
-
-            $("html").on("transitionend webkitTransitionEnd msTransitionEnd oTransitionEnd", function (e) {
-                if (e.target == e.currentTarget && $(this).data("transitioning") === true) {
-                    $(this).removeAttr("style").data("transitioning", false);
-                    $("html, body").scrollTop(scroll);
-                    return;
-                }
-            });
-        });*/
+        });
     </script>
   </body>
 </html>
