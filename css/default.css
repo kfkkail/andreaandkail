@@ -277,6 +277,14 @@ a {
     font-size: 25px;
     margin: 1%;
 }
+
+.akEnagagmentVideo {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
  
 .fa-facebook {
     background:#3b5998

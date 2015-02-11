@@ -30,8 +30,12 @@
     <link href='//fonts.googleapis.com/css?family=Lobster|Lato|Arizonia' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="lib/Gallery/css/blueimp-gallery.min.css">
     <link href="css/default.css" rel="stylesheet">
-    
-    
+
+    <link href="lib/video-js/video-js.css" rel="stylesheet">
+    <script src="lib/video-js/video.js"></script>
+    <script>
+      videojs.options.flash.swf = "lib/video-js/video-js.swf"
+    </script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -91,7 +95,13 @@
                     <h3>The Engagement</h3>
                         <p>Andrea had to travel for a work event and wanted to spend the weekend before in Nashville, TN. Kail agreed that would be awesome and make for a nice little mini vacation before spending the next week apart. :-( Andrea and Kail had reservations for dinner in downtown Nashville on Saturday night. Before leaving, Kail insisted on bringing the big DSLR camera bag (and tripod, hint, hint) to get a picture of downtown Nashville together. They took the hotel shuttle downtown and started walking around. Kail had the brilliant idea of getting a view of downtown Nashville from the pedestrian bridge overlooking the main skyline. It took a little walking and a little convincing because as soon as they got on the bridge, Kail insisted they get to the other side of the river to find a better spot for the “picture”. After finding THE spot, Andrea got ready for the picture while Kail got the camera setup for a timed photo (he actually started a video). Kail came over while Andrea asked how long it took for the camera to take a picture. He said, “Oh, I don’t know, 10 seconds?”. After waiting, Kail turned towards her and said “Andrea, I love you...” Andrea responded right away “Oh my gosh, what are you doing??” and turned away covering her face. He turned her around, got on one knee, and popped the question. She said YES!!</p>
 
-                        <img src="img/OnOneKnee-square.jpg" class="img-responsive img-rounded akEngageImg" alt="Responsive image">
+                    <video id="example_video_1" class="video-js vjs-default-skin akEnagagmentVideo"
+                      controls preload="auto" width="888" height="500"
+                      poster="img/OnOneKnee.jpg"
+                      data-setup='{"example_option":true}'>
+                        <source src="img/Engaged.mp4" type='video/mp4' />
+                        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+                    </video>
             </div> <!--BrideandGroom akParagraph -->
         </section> <!-- /.brideandGroom -->
         
