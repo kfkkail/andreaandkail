@@ -270,6 +270,13 @@ a {
     padding-top: 15%;
     transition: all 0.2s ease-in-out;
 }
+
+.akRegistryli {
+    list-style-type: none;
+    float: left;
+    font-size: 25px;
+    margin: 1%;
+}
  
 .fa-facebook {
     background:#3b5998
@@ -281,6 +288,9 @@ a {
     background:#A3BAB4
 }
 .akSocialli:hover {
+    opacity: .7;
+}
+.akRegistryli:hover {
     opacity: .7;
 }
 
