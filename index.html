@@ -38,11 +38,6 @@
     </script>
 
     <script src="lib/videojs-ga-master/dist/videojs.ga.min.js"></script>
-    <script>
-        videojs('video', {}, function() {
-          this.ga(); // "load the plugin, by defaults tracks everything!!"
-        });
-    </script>
 
     <style>
     .video-js {padding-top: 56.25%}
@@ -555,6 +550,11 @@
                 ga('send', 'event',  'externallinks', 'click', 'akCrateandBarrel');
             });
 
+        });
+    </script>
+    <script>
+        videojs('video', {}, function() {
+          this.ga(); // "load the plugin, by defaults tracks everything!!"
         });
     </script>
     <script>
