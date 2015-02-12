@@ -295,8 +295,8 @@
                 <h4>Your presence at our wedding is the absolute best gift.</h4>
                 <h4>We are registered at Bed Bath and Beyond and Crate and Barrel.</h4>
                 <ul class='akSocialul'>
-                    <li class='akRegistryli'><a rel="nofollow" href=""><img class="img-responsive akBedBathandBeyond" title="Bed Bath and Bayond" alt="Bed Bath and Beyond" src="img/bed-bath-and-beyond.png"/></a></li>
-                    <li class='akRegistryli'><a rel="nofollow" class="ico-btn" href=""><img  class="img-responsive akCrateandBarrel" title="Crate and Barrel" alt="Crate and Barrel" src="img/crate-and-barrel.png"/></a></li>
+                    <li class='akRegistryli'><a rel="nofollow" href=""><img id="akBedBathandBeyond" class="img-responsive akBedBathandBeyond" title="Bed Bath and Bayond" alt="Bed Bath and Beyond" src="img/bed-bath-and-beyond.png"/></a></li>
+                    <li class='akRegistryli'><a rel="nofollow" class="ico-btn" href=""><img id="akCrateandBarrel"  class="img-responsive akCrateandBarrel" title="Crate and Barrel" alt="Crate and Barrel" src="img/crate-and-barrel.png"/></a></li>
                 </ul>
                 <h2>Love Notes for Andrea and Kail</h2>
                 <ul class='akSocialul'>
@@ -535,6 +535,23 @@
             $('#elDoradoCasitasRoyale').click(function() {
                 ga('send', 'event',  'externallinks', 'click', 'elDoradoCasitasRoyale');
             });
+
+            //video controls
+
+            $('#vjs-big-play-button').click(function() {
+                ga('send', 'event',  'externallinks', 'click', 'vjs-big-play-button');
+            }); 
+
+            //registry clicks
+
+            $('#akBedBathandBeyond').click(function() {
+                ga('send', 'event',  'externallinks', 'click', 'akBedBathandBeyond');
+            });
+
+            $('#akCrateandBarrel').click(function() {
+                ga('send', 'event',  'externallinks', 'click', 'akCrateandBarrel');
+            });
+
         });
     </script>
     <script>
